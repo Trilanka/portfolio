@@ -33,7 +33,7 @@ const Aunique = () => {
             <div className="relative w-full h-80 sm:h-96 bg-black-200 rounded-2xl border-2 border-purple/30 shadow-2xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-purple to-pink-300 rounded-2xl blur-3xl opacity-20"></div>
               <Image 
-                src="/win.jpg" 
+                src="./win.jpg" 
                 alt="Trilanka winning drone competition" 
                 className="relative w-full h-full object-contain p-2"
                 width={500}

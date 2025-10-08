@@ -21,7 +21,7 @@ const Alead = () => {
                 </p>
                 <div className='ml-20'>
                 <Image 
-                src="/lead.jpg" 
+                src="./lead.jpg" 
                 alt="Leadership experience" 
                 className='w-auto h-80 max-w-full max-h-full object-contain rounded-xl'
                 width={400}

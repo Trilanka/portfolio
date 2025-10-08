@@ -62,7 +62,7 @@ const AHero = () => {
             <div className="relative w-80 h-80 sm:w-96 sm:h-96 bg-black-200 rounded-2xl border-2 border-purple/30 shadow-2xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-purple to-pink-300 rounded-2xl blur-3xl opacity-20"></div>
               <Image 
-                src="/profile.png" 
+                src="./profile.png" 
                 alt="Trilanka Beddegama" 
                 className="relative w-full h-full object-contain p-2"
                 width={400}

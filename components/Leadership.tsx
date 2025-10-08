@@ -24,7 +24,7 @@ const Leadership = () => {
       description: `Experience real-time updates and never stress about version control again. Our platform ensures that you're always 
       working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your 
       team aligned, and maintain the flow of your work without any interruptions.`,
-      content: <div className="w-full h-full bg-black-200 rounded-lg overflow-hidden"><Image src="/bg.png" alt="Real-time changes" width={600} height={400} className="w-full h-full object-contain p-2" /></div>,
+      content: <div className="w-full h-full bg-black-200 rounded-lg overflow-hidden"><Image src="./bg.png" alt="Real-time changes" width={600} height={400} className="w-full h-full object-contain p-2" /></div>,
     }
     
   ];
