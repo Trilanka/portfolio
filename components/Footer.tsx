@@ -9,9 +9,11 @@ const Footer = () => {
     <footer className="w-full pb-10 pt-20 " id='contact'>
       <div className="flex flex-col items-center">
         <h1 className="heading lg:mx-w-[45vw]">
-          Ready To take <span className='text-pink-300'>your</span> Digital Presence Into Next Level?
+          Ready to <span className='text-purple'>Elevate</span> Your Digital Experience?
           </h1>
-        <p className="text-white-200 md:mt-10 text-center">I am a fresh graduate, eager for a chance to prove myself in the field of software engineering.</p>
+        <p className="text-white-200 md:mt-10 my-5 text-center max-w-2xl">
+          I create scalable, high-performance solutions that drive results. Let&apos;s collaborate to bring your ideas to life with cutting-edge technology.
+        </p>
         
         
         <a href="https://www.linkedin.com/in/trilanka-beddegama-245359192/">

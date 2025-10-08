@@ -82,4 +82,12 @@
   .heading {
     @apply font-bold text-4xl md:text-5xl text-center;
   }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }

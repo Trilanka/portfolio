@@ -29,8 +29,8 @@ const Hero = () => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <TextGenerateEffect
-            words="Driven Software Engineer Ready to Elevate Your Team"
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
+            words="Software Engineer | AI/ML Developer | Electronics Engineer"
+            className="text-center text-[28px] md:text-3xl lg:text-4xl"
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
