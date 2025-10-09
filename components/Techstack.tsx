@@ -102,130 +102,96 @@ const Techstack = () => {
   };
 
   return (
-    <div className='border-b border-neutral-800 pb-40'>
-      <motion.h1 
-        className="heading py-40"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        My Technology <span className="text-purple">Stack</span>
-      </motion.h1>
-
-      {/* Horizontal Scrollable Tech Stack */}
-      <motion.div 
-        className="relative"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        viewport={{ once: true }}
-      >
-        {/* Scroll buttons - only visible on non-touch devices */}
-        <motion.button
-          onClick={scrollLeft}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 hidden md:flex items-center justify-center w-10 h-10 bg-black-200/80 backdrop-blur-sm border border-white/20 rounded-full text-white hover:bg-white/10 transition-all duration-300"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+    <div className="py-24 px-6 sm:px-8 lg:px-12 xl:px-16">
+      <div className="max-w-6xl mx-auto">
+        <motion.h1 
+          className="text-5xl sm:text-6xl lg:text-7xl font-light text-white mb-20 text-center tracking-tight"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
         >
-          <FaChevronLeft className="text-sm" />
-        </motion.button>
+          Technology Stack
+        </motion.h1>
 
-        <motion.button
-          onClick={scrollRight}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 hidden md:flex items-center justify-center w-10 h-10 bg-black-200/80 backdrop-blur-sm border border-white/20 rounded-full text-white hover:bg-white/10 transition-all duration-300"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+        {/* Tech Stack Grid */}
+        <motion.div 
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-20"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+          viewport={{ once: true }}
         >
-          <FaChevronRight className="text-sm" />
-        </motion.button>
+          {techStack.map((tech, index) => (
+            <motion.div
+              key={tech.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.1, ease: "easeOut" }}
+              viewport={{ once: true }}
+              onMouseEnter={() => setHoveredTech(tech.name)}
+              onMouseLeave={() => setHoveredTech(null)}
+              className="group cursor-pointer"
+            >
+              <div className="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm hover:bg-white/8 transition-all duration-300 text-center h-full">
+                <motion.div
+                  className="text-white mb-4 flex justify-center"
+                  whileHover={{ 
+                    scale: 1.1,
+                    transition: { duration: 0.2 }
+                  }}
+                >
+                  {tech.icon}
+                </motion.div>
+                
+                <h3 className="text-white font-medium mb-2 text-sm">
+                  {tech.name}
+                </h3>
 
-        {/* Gradient overlays for scroll indication */}
-        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-black-100 to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-black-100 to-transparent z-10 pointer-events-none"></div>
-        
-        {/* Scrollable container */}
-        <div ref={scrollContainerRef} className="overflow-x-auto scrollbar-hide pb-4">
-          <div className="flex gap-6 px-8" style={{ width: 'max-content' }}>
-            {techStack.map((tech, index) => (
-              <motion.div
-                key={tech.name}
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                onMouseEnter={() => setHoveredTech(tech.name)}
-                onMouseLeave={() => setHoveredTech(null)}
-                className="flex-shrink-0"
-              >
-                <CardSpotlight className="h-40 w-32 cursor-pointer group">
-                  <div className="flex flex-col items-center justify-center h-full p-4 relative">
-                    <motion.div
-                      className={`${tech.color} transition-all duration-300`}
-                      whileHover={{ 
-                        scale: 1.1,
-                        rotate: [0, -5, 5, 0],
-                        transition: { duration: 0.3 }
-                      }}
-                    >
-                      {tech.icon}
-                    </motion.div>
-                    
-                    <motion.p 
-                      className="text-xs text-neutral-400 mt-3 text-center font-medium"
-                      initial={{ opacity: 0.7 }}
-                      whileHover={{ opacity: 1 }}
-                    >
-                      {tech.name}
-                    </motion.p>
+                {/* Tooltip */}
+                <motion.div
+                  className="absolute -top-16 left-1/2 transform -translate-x-1/2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-3 py-2 text-xs text-white whitespace-nowrap opacity-0 pointer-events-none z-50"
+                  animate={{ 
+                    opacity: hoveredTech === tech.name ? 1 : 0,
+                    y: hoveredTech === tech.name ? 0 : 10
+                  }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {tech.description}
+                </motion.div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
 
-                    {/* Tooltip */}
-                    <motion.div
-                      className="absolute -top-20 left-1/2 transform -translate-x-1/2 bg-neutral-900/95 backdrop-blur-sm border border-neutral-700 rounded-lg px-3 py-2 text-xs text-white whitespace-nowrap opacity-0 pointer-events-none z-50"
-                      animate={{ 
-                        opacity: hoveredTech === tech.name ? 1 : 0,
-                        y: hoveredTech === tech.name ? 0 : 10
-                      }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      {tech.description}
-                      <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-neutral-700"></div>
-                    </motion.div>
-                  </div>
-                </CardSpotlight>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.div>
-
-      {/* Stats Section */}
-      <motion.div 
-        className="mt-20 grid grid-cols-3 gap-8 max-w-3xl mx-auto"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-        viewport={{ once: true }}
-      >
-        {[
-          { label: 'Technologies', value: '8+', icon: '⚡' },
-          { label: 'Years Experience', value: '2+', icon: '🚀' },
-          { label: 'Projects Built', value: '5+', icon: '💻' }
-        ].map((stat, index) => (
-          <motion.div
-            key={stat.label}
-            className="text-center"
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
-            viewport={{ once: true }}
-          >
-            <div className="text-3xl mb-2">{stat.icon}</div>
-            <div className="text-2xl font-bold text-purple mb-1">{stat.value}</div>
-            <div className="text-sm text-neutral-400">{stat.label}</div>
-          </motion.div>
-        ))}
-      </motion.div>
+        {/* Stats Section */}
+        <motion.div 
+          className="grid grid-cols-3 gap-8"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          {[
+            { label: 'Technologies', value: '8+', icon: '⚡' },
+            { label: 'Years Experience', value: '2+', icon: '🚀' },
+            { label: 'Projects Built', value: '5+', icon: '💻' }
+          ].map((stat, index) => (
+            <motion.div
+              key={stat.label}
+              className="text-center bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4, delay: 0.6 + index * 0.1, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              <div className="text-3xl mb-3">{stat.icon}</div>
+              <div className="text-2xl font-light text-white mb-2">{stat.value}</div>
+              <div className="text-sm text-gray-400 font-light">{stat.label}</div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
     </div>
   )
 }

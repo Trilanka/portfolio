@@ -1,49 +1,65 @@
-import { FaLocationArrow } from "react-icons/fa";
-import MagicButton from "./MagicButton";
-import { Spotlight } from "./ui/Spotlight";
-import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+"use client";
 
+import { motion } from "framer-motion";
+import { FaArrowRight } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36">
-      <div>
-        <Spotlight
-          className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
-          fill="white"
-        />
-        <Spotlight
-          className="h-[80vh] w-[50vw] top-10 left-full"
-          fill="black"
-        />
-        <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" /> 
-      </div> 
-      <div className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
-       absolute top-0 left-0 flex items-center justify-center">
-          <div
-          // chnage the bg to bg-black-100, so it matches the bg color and will blend in
-          className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100
-         bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
-        />
+    <div className="relative h-screen flex items-center justify-center px-6 sm:px-8 lg:px-12 xl:px-16 overflow-hidden">
+      {/* Light Beam Effects */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Main light beam from top center */}
+        <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-gradient-to-b from-white/8 via-white/4 to-transparent rounded-full blur-3xl"></div>
+        
+        {/* Secondary light beam from top right */}
+        <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-bl from-white/6 via-white/3 to-transparent rounded-full blur-3xl"></div>
+        
+        {/* Accent light beam from bottom left */}
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-tr from-white/5 via-white/2 to-transparent rounded-full blur-3xl"></div>
+        
+        {/* Subtle radial gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/10"></div>
       </div>
-      <div className="flex justify-center relative my-20 z-10">
-        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <TextGenerateEffect
-            words="Software Engineer | AI/ML Developer | Electronics Engineer"
-            className="text-center text-[28px] md:text-3xl lg:text-4xl"
-          />
 
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Trilanka, a Full Stack Developer based in Colombo, Sri Lanka.
-          </p>
+      <div className="relative z-10 max-w-6xl w-full">
+        <div className="text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="mb-12"
+          >
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-white mb-8 leading-tight tracking-tight">
+              Software Engineer
+            </h1>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-gray-300 mb-16 leading-tight tracking-tight">
+              AI/ML Developer • Electronics Engineer
+            </h2>
+          </motion.div>
 
-          <a href="about">
-            <MagicButton
-              title="Description on ME"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+            className="max-w-3xl mx-auto mb-16"
+          >
+            <p className="text-xl md:text-2xl text-gray-300 leading-relaxed font-light">
+              Hi! I&apos;m Trilanka, an Application Engineer passionate about creating technology that makes a difference, based in Colombo, Sri Lanka.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+          >
+            <a href="about">
+              <button className="inline-flex items-center gap-3 px-8 py-4 bg-white text-black rounded-full font-medium hover:bg-gray-100 transition-colors duration-300">
+                Learn More About Me
+                <FaArrowRight className="text-sm" />
+              </button>
+            </a>
+          </motion.div>
         </div>
       </div>
     </div>
