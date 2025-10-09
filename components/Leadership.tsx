@@ -140,7 +140,7 @@ const Leadership = () => {
         viewport={{ once: true }}
       >
         <blockquote className="text-xl md:text-2xl text-neutral-300 italic max-w-3xl mx-auto">
-          "True leadership is not about being in charge, it's about taking care of those in your charge."
+          &ldquo;True leadership is not about being in charge, it&apos;s about taking care of those in your charge.&rdquo;
         </blockquote>
         <cite className="text-blue-400 font-semibold mt-4 block">— Trilanka</cite>
       </motion.div>

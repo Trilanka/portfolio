@@ -32,9 +32,9 @@ export default function MermaidDiagram({ chart, title, className = "" }: Mermaid
 
     if (chartRef.current) {
       chartRef.current.innerHTML = '';
-      mermaid.render('mermaid-' + Math.random().toString(36).substr(2, 9), chart, (svgCode) => {
+      mermaid.render('mermaid-' + Math.random().toString(36).substr(2, 9), chart).then(({ svg }) => {
         if (chartRef.current) {
-          chartRef.current.innerHTML = svgCode;
+          chartRef.current.innerHTML = svg;
         }
       });
     }
