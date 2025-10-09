@@ -4,6 +4,8 @@ const nextConfig = {
     images: {
         unoptimized: true,
     },
+    // Force rebuild for GitHub Pages deployment
+    trailingSlash: true,
 };
 
 export default nextConfig;
