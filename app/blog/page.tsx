@@ -8,7 +8,7 @@ import Link from 'next/link';
 const blogPosts = [
   {
     id: 1,
-    slug: "Relational Database Schema for Real Time Messaging System",
+    slug: "building-portfolio-nextjs-14",
     title: "🚀 From Zero to Hero: How I Built a Portfolio That Landed Me 12 Job Interviews",
     excerpt: "The complete roadmap from boring portfolio to stunning showcase. Learn the exact steps, tech stack decisions, and performance optimizations that made recruiters say 'WOW!'",
     date: "2024-12-19",
@@ -18,16 +18,36 @@ const blogPosts = [
   },
   {
     id: 2,
-    slug: "AWS Network Architecture and Security",
+    slug: "interactive-ui-components-framer-motion",
+    title: "🎭 The Animation Revolution: How Micro-Interactions Increased My Job Interview Rate by 300%",
+    excerpt: "Discover the psychology behind animations and learn how to create engaging UI components that keep visitors scrolling. Real code examples and performance tips included.",
+    date: "2024-12-18",
+    readTime: "10 min read",
+    category: "UI/UX",
+    tags: ["Framer Motion", "Animations", "Psychology", "Performance"]
+  },
+  {
+    id: 3,
+    slug: "responsive-design-patterns-react",
+    title: "📱 Mobile-First Magic: How I Made My Portfolio Look Perfect on Every Device",
+    excerpt: "The complete guide to responsive design that actually works. Learn the mobile-first approach, CSS Grid secrets, and typography scaling techniques that made my portfolio shine on all screens.",
+    date: "2024-12-17",
+    readTime: "8 min read",
+    category: "Responsive Design",
+    tags: ["Mobile-First", "CSS Grid", "Typography", "Breakpoints"]
+  },
+  {
+    id: 4,
+    slug: "component-architecture-state-management",
     title: "🏗️ The Architecture That Scales: How I Organized 50+ Components Without Losing My Mind",
-    excerpt: "In this Blog you will discover how AWS use their architectures to localize and provide better approach in its networking and security.",
+    excerpt: "Discover the folder structure and component patterns that keep large React applications maintainable. Real examples from my portfolio with custom hooks and state management strategies.",
     date: "2024-12-16",
     readTime: "11 min read",
     category: "Architecture",
     tags: ["Component Architecture", "Custom Hooks", "State Management", "Scalability"]
   },
   {
-    id: 3,
+    id: 5,
     slug: "performance-optimization-portfolio",
     title: "⚡ Speed Demon: How I Achieved 96/100 Lighthouse Score and 1.2s Load Time",
     excerpt: "The performance optimization techniques that made my portfolio lightning fast. Learn about image optimization, code splitting, and bundle analysis that actually work in production.",
@@ -37,7 +57,7 @@ const blogPosts = [
     tags: ["Lighthouse", "Bundle Optimization", "Image Optimization", "Core Web Vitals"]
   },
   {
-    id: 4,
+    id: 6,
     slug: "deploying-nextjs-portfolio-static",
     title: "🚀 From Localhost to Global: The Complete Deployment Guide That Actually Works",
     excerpt: "Step-by-step deployment guide with real results. Learn how to deploy your Next.js portfolio with static generation, set up custom domains, and achieve 99.9% uptime.",
