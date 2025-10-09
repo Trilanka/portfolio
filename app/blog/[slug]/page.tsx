@@ -9,34 +9,33 @@ const blogPosts = [
   {
     id: 1,
     slug: "building-portfolio-nextjs-14",
-    title: "Building My Portfolio with Next.js 14 and Modern UI Components",
+    title: "Building My Portfolio with Next.js 14: A Complete Developer's Journey",
     excerpt: "A deep dive into creating this portfolio website using Next.js 14, TypeScript, and custom UI components. Learn about the architecture decisions and modern development practices I used.",
-    content: `
-# 🚀 Building My Portfolio with Next.js 14: A Complete Developer's Journey
+    content: `# Building My Portfolio with Next.js 14: A Complete Developer's Journey
 
 *"From zero to hero: How I built a stunning portfolio that landed me multiple job interviews"*
 
-## 🎯 The Challenge
+## The Challenge
 
 Picture this: You're a developer with amazing projects, but your portfolio looks like it's from 2010. Sound familiar? That was me 3 months ago. I had incredible projects but no way to showcase them properly.
 
 The Problem: My old portfolio was:
-- ❌ Slow and clunky
-- ❌ Not mobile-friendly  
-- ❌ Boring design
-- ❌ No interactive elements
-- ❌ Poor SEO
+- Slow and clunky
+- Not mobile-friendly  
+- Boring design
+- No interactive elements
+- Poor SEO
 
 The Goal: Create a portfolio that would make recruiters say "WOW!" and developers ask "How did you build this?"
 
-## 🗺️ The Roadmap: From Idea to Launch
+## The Roadmap: From Idea to Launch
 
 ### Phase 1: Planning & Research (Week 1)
 What I did:
-- 🔍 Analyzed 50+ developer portfolios
-- 📝 Created a feature wishlist
-- 🎨 Designed wireframes in Figma
-- 📊 Set performance benchmarks
+- Analyzed 50+ developer portfolios
+- Created a feature wishlist
+- Designed wireframes in Figma
+- Set performance benchmarks
 
 Key Insight: Most portfolios fail because they focus on features, not user experience.
 
@@ -54,61 +53,57 @@ My Decision Matrix:
 | Vite | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐ | |
 
 Why Next.js 14 Won:
-- 🚀 App Router = 40% faster builds
-- 📱 Built-in mobile optimization
-- 🔍 SEO out of the box
-- 💼 Industry standard (everyone's hiring for it!)
+- App Router = 40% faster builds
+- Built-in mobile optimization
+- SEO out of the box
+- Industry standard (everyone's hiring for it!)
 
 ### Phase 3: Architecture Design (Week 2)
 
-#### Understanding Component Architecture
+Understanding Component Architecture
 Think of your portfolio like a house. You need a solid foundation (layout), rooms (pages), and furniture (components). Here's how I organized mine:
 
-```
-🏠 Portfolio Architecture
-├── 🏗️ Foundation (app/)
-│   ├── 📄 layout.tsx (The house blueprint)
-│   ├── 📄 page.tsx (The main living room)
-│   ├── 📁 blog/ (The library room)
-│   │   ├── 📄 page.tsx (Book catalog)
-│   │   └── 📁 [slug]/ (Individual books)
-│   └── 📁 about/ (The personal room)
-│
-├── 🪑 Furniture (components/)
-│   ├── 🎨 Hero.tsx (Welcome mat)
-│   ├── 🎨 Projects.tsx (Showcase cabinet)
-│   ├── 🎨 Techstack.tsx (Skills display)
-│   └── 📁 ui/ (Reusable furniture)
-│       ├── 🎨 FloatingNavbar.tsx (Smart doorbell)
-│       ├── 🎨 BentoGrid.tsx (Organized shelves)
-│       └── 🎨 MagicButton.tsx (Interactive light switch)
-```
+Portfolio Architecture:
+- Foundation (app/)
+  - layout.tsx (The house blueprint)
+  - page.tsx (The main living room)
+  - blog/ (The library room)
+    - page.tsx (Book catalog)
+    - [slug]/ (Individual books)
+  - about/ (The personal room)
 
-#### The Component Hierarchy Explained
+- Furniture (components/)
+  - Hero.tsx (Welcome mat)
+  - Projects.tsx (Showcase cabinet)
+  - Techstack.tsx (Skills display)
+  - ui/ (Reusable furniture)
+    - FloatingNavbar.tsx (Smart doorbell)
+    - BentoGrid.tsx (Organized shelves)
+    - MagicButton.tsx (Interactive light switch)
+
+The Component Hierarchy Explained
 
 Let me break down why this structure works:
 
-**1. Separation of Concerns**
+1. Separation of Concerns
 - Pages handle routing and data fetching
 - Components handle UI and interactions
 - UI components are reusable across pages
 
-**2. Scalability Pattern**
-```
-Page Component (Smart)
-├── Fetches data
-├── Handles routing
-└── Composes UI components
+2. Scalability Pattern
+Page Component (Smart):
+- Fetches data
+- Handles routing
+- Composes UI components
 
-UI Component (Dumb)
-├── Receives props
-├── Renders UI
-└── Handles interactions
-```
+UI Component (Dumb):
+- Receives props
+- Renders UI
+- Handles interactions
 
-**3. Real Example from My Portfolio**
-```tsx
-// Smart Component (page.tsx)
+3. Real Example from My Portfolio
+
+Smart Component (page.tsx):
 export default function HomePage() {
   const projects = fetchProjects(); // Data fetching
   
@@ -121,7 +116,7 @@ export default function HomePage() {
   );
 }
 
-// Dumb Component (Projects.tsx)
+Dumb Component (Projects.tsx):
 interface ProjectsProps {
   data: Project[];
 }
@@ -135,26 +130,22 @@ export function Projects({ data }: ProjectsProps) {
     </div>
   );
 }
-```
 
 Pro Tip: Start with the folder structure first. It saves you 10+ hours of refactoring later!
 
 ### Phase 4: The Build Process (Weeks 3-4)
 
-#### Day 1-2: Setting Up the Foundation
-\`\`\`bash
+Day 1-2: Setting Up the Foundation
 # The magic commands that started it all
 npx create-next-app@latest portfolio --typescript --tailwind --app
 cd portfolio
 npm install framer-motion lucide-react
-\`\`\`
 
-#### Day 3-5: Building the Hero Section
+Day 3-5: Building the Hero Section
 The Challenge: Make visitors stay longer than 3 seconds
 The Solution: Interactive animations + compelling copy
 
-\`\`\`tsx
-// The hero that converts visitors into contacts
+The hero that converts visitors into contacts:
 const Hero = () => {
   return (
     <motion.div
@@ -173,20 +164,19 @@ const Hero = () => {
     </motion.div>
   );
 };
-\`\`\`
 
-#### Day 6-8: Project Showcase
+Day 6-8: Project Showcase
 The Problem: How do you make a project gallery not boring?
 The Solution: Interactive cards with hover effects
 
-#### Day 9-10: Blog System
+Day 9-10: Blog System
 The Innovation: Instead of just showing projects, I decided to teach others how I built them.
 
 ### Phase 5: Performance Optimization (Week 5)
 The Numbers Game:
-- 🎯 Target: < 2s load time
-- 🎯 Target: > 90 Lighthouse score
-- 🎯 Target: < 100KB initial bundle
+- Target: < 2s load time
+- Target: > 90 Lighthouse score
+- Target: < 100KB initial bundle
 
 Optimization Techniques:
 1. Image Optimization: Next.js Image component = 60% smaller files
@@ -195,11 +185,11 @@ Optimization Techniques:
 4. Bundle Analysis: Removed unused code = 30% smaller bundle
 
 Results:
-- ⚡ Load time: 1.2s (Target: <2s) ✅
-- 📊 Lighthouse: 96/100 (Target: >90) ✅
-- 📦 Bundle size: 85KB (Target: <100KB) ✅
+- Load time: 1.2s (Target: <2s) ✅
+- Lighthouse: 96/100 (Target: >90) ✅
+- Bundle size: 85KB (Target: <100KB) ✅
 
-## 🎨 The Design Philosophy
+## The Design Philosophy
 
 ### Color Psychology
 - Black Background: Professional, reduces eye strain
@@ -216,7 +206,7 @@ Results:
 - Performance: 60fps or nothing
 - Accessibility: Respects reduced motion preferences
 
-## 🚀 The Launch Strategy
+## The Launch Strategy
 
 ### Pre-Launch (Week 6)
 1. Beta Testing: 10 developers tested the site
@@ -231,12 +221,12 @@ Results:
 4. Portfolio Sites: Submitted to Awwwards, CSS Design Awards
 
 ### Post-Launch Results
-- 📈 Traffic: 500% increase in visitors
-- 💼 Job Inquiries: 12 companies reached out
-- 🎯 Conversion Rate: 8% of visitors contacted me
-- ⭐ Feedback: 4.9/5 average rating
+- Traffic: 500% increase in visitors
+- Job Inquiries: 12 companies reached out
+- Conversion Rate: 8% of visitors contacted me
+- Feedback: 4.9/5 average rating
 
-## 💡 Key Lessons Learned
+## Key Lessons Learned
 
 ### What Worked
 1. Start with user research - Don't assume what looks good
@@ -250,7 +240,7 @@ Results:
 3. No analytics - Couldn't optimize what I couldn't measure
 4. Skipping testing - Bugs in production hurt credibility
 
-## 🛠️ The Tech Stack Breakdown
+## The Tech Stack Breakdown
 
 ### Frontend
 - Next.js 14: React framework with App Router
@@ -268,7 +258,7 @@ Results:
 - Hotjar: User behavior analysis
 - Lighthouse CI: Performance monitoring
 
-## 🎯 The ROI: Was It Worth It?
+## The ROI: Was It Worth It?
 
 ### Time Investment
 - Total Time: 6 weeks (part-time)
@@ -283,679 +273,200 @@ Results:
 
 ROI: 1000%+ return on time investment
 
-## 🚀 What's Next?
+## What's Next?
 
 ### Phase 2 Features (Coming Soon)
-- 🎥 Video Case Studies: Deep dives into complex projects
-- 🎮 Interactive Demos: Play with my code live
-- 📊 Analytics Dashboard: Real-time portfolio metrics
-- 🌍 Multi-language Support: Reach global audience
+- Video Case Studies: Deep dives into complex projects
+- Interactive Demos: Play with my code live
+- Analytics Dashboard: Real-time portfolio metrics
+- Multi-language Support: Reach global audience
 
 ### The Learning Never Stops
-- 📚 New Technologies: Exploring Web3, AI integration
-- 🎨 Design Trends: Staying ahead of the curve
-- ⚡ Performance: Always optimizing for speed
-- 👥 Community: Teaching others what I learn
+- New Technologies: Exploring Web3, AI integration
+- Design Trends: Staying ahead of the curve
+- Performance: Always optimizing for speed
+- Community: Teaching others what I learn
 
-## 🎓 Learning Roadmap: From Beginner to Portfolio Master
+## Learning Roadmap: From Beginner to Portfolio Master
 
 ### Phase 1: Foundation (Weeks 1-2)
-```
-🎯 Learning Goals
-├── 📚 Understand React basics
-│   ├── Components and props
-│   ├── State and hooks
-│   └── Event handling
-│
-├── 🎨 Master CSS fundamentals
-│   ├── Flexbox and Grid
-│   ├── Responsive design
-│   └── CSS animations
-│
-└── 🛠️ Set up development environment
-    ├── Node.js and npm
-    ├── VS Code extensions
-    └── Git and GitHub
-```
+Learning Goals:
+- Understand React basics
+  - Components and props
+  - State and hooks
+  - Event handling
+- Master CSS fundamentals
+  - Flexbox and Grid
+  - Responsive design
+  - CSS animations
+- Set up development environment
+  - Node.js and npm
+  - VS Code extensions
+  - Git and GitHub
 
 ### Phase 2: Next.js Mastery (Weeks 3-4)
-```
-🚀 Next.js Learning Path
-├── 📖 App Router concepts
-│   ├── File-based routing
-│   ├── Layouts and pages
-│   └── Server vs Client components
-│
-├── 🎨 Styling approaches
-│   ├── Tailwind CSS basics
-│   ├── Component styling
-│   └── Responsive utilities
-│
-└── ⚡ Performance optimization
-    ├── Image optimization
-    ├── Code splitting
-    └── Bundle analysis
-```
+Next.js Learning Path:
+- App Router concepts
+  - File-based routing
+  - Layouts and pages
+  - Server vs Client components
+- Styling approaches
+  - Tailwind CSS basics
+  - Component styling
+  - Responsive utilities
+- Performance optimization
+  - Image optimization
+  - Code splitting
+  - Bundle analysis
 
 ### Phase 3: Animation & Interaction (Weeks 5-6)
-```
-🎭 Animation Learning Journey
-├── 🎬 Framer Motion basics
-│   ├── Motion components
-│   ├── Variants and transitions
-│   └── Gesture handling
-│
-├── 🧠 UX principles
-│   ├── User psychology
-│   ├── Attention patterns
-│   └── Accessibility
-│
-└── 🎯 Performance considerations
-    ├── GPU acceleration
-    ├── Reduced motion
-    └── Mobile optimization
-```
+Animation Learning Journey:
+- Framer Motion basics
+  - Motion components
+  - Variants and transitions
+  - Gesture handling
+- UX principles
+  - User psychology
+  - Attention patterns
+  - Accessibility
+- Performance considerations
+  - GPU acceleration
+  - Reduced motion
+  - Mobile optimization
 
 ### Phase 4: Advanced Concepts (Weeks 7-8)
-```
-🏗️ Advanced Portfolio Features
-├── 📊 Analytics integration
-│   ├── Google Analytics
-│   ├── User behavior tracking
-│   └── Performance monitoring
-│
-├── 🔍 SEO optimization
-│   ├── Meta tags
-│   ├── Structured data
-│   └── Site maps
-│
-└── 🚀 Deployment strategies
-    ├── Static site generation
-    ├── CDN configuration
-    └── Domain setup
-```
+Advanced Portfolio Features:
+- Analytics integration
+  - Google Analytics
+  - User behavior tracking
+  - Performance monitoring
+- SEO optimization
+  - Meta tags
+  - Structured data
+  - Site maps
+- Deployment strategies
+  - Static site generation
+  - CDN configuration
+  - Domain setup
 
-### 📚 Recommended Resources
+### Recommended Resources
 
-#### Books
+Books:
 - "React: Up & Running" by Stoyan Stefanov
 - "Designing with Web Standards" by Jeffrey Zeldman
 - "Don't Make Me Think" by Steve Krug
 
-#### Online Courses
+Online Courses:
 - Next.js Official Tutorial
 - Framer Motion Documentation
 - Tailwind CSS Interactive Tutorial
 
-#### Tools & Extensions
+Tools & Extensions:
 - React Developer Tools
 - Lighthouse (Performance)
 - Figma (Design)
 
-### 🎯 Practice Projects
+### Practice Projects
 
-#### Beginner Level
-1. **Static Portfolio**: HTML, CSS, JavaScript
-2. **React Components**: Reusable UI elements
-3. **Responsive Layout**: Mobile-first design
+Beginner Level:
+1. Static Portfolio: HTML, CSS, JavaScript
+2. React Components: Reusable UI elements
+3. Responsive Layout: Mobile-first design
 
-#### Intermediate Level
-1. **Next.js Blog**: Dynamic routing
-2. **Animation Library**: Framer Motion practice
-3. **Performance Audit**: Optimization techniques
+Intermediate Level:
+1. Next.js Blog: Dynamic routing
+2. Animation Library: Framer Motion practice
+3. Performance Audit: Optimization techniques
 
-#### Advanced Level
-1. **Full Portfolio**: Complete with animations
-2. **CMS Integration**: Content management
-3. **Analytics Dashboard**: User insights
+Advanced Level:
+1. Full Portfolio: Complete with animations
+2. CMS Integration: Content management
+3. Analytics Dashboard: User insights
 
-## 🎉 Final Thoughts
+## Final Thoughts
 
 Building this portfolio wasn't just about showcasing my work—it was about creating a digital experience that tells my story. Every animation, every color choice, every line of code was intentional.
 
 ### Key Takeaways
-- **Start Simple**: Don't over-engineer from day one
-- **Learn by Building**: Theory without practice is useless
-- **Measure Everything**: Data drives better decisions
-- **Iterate Constantly**: Your first version won't be perfect
+- Start Simple: Don't over-engineer from day one
+- Learn by Building: Theory without practice is useless
+- Measure Everything: Data drives better decisions
+- Iterate Constantly: Your first version won't be perfect
 
 The biggest lesson: Your portfolio is your digital first impression. Make it count.
 
 ### What's Next?
 Want to build your own? I'm creating a complete video course that covers:
-- 🎥 Step-by-step tutorials
-- 🎮 Interactive code examples
-- 📊 Real performance data
-- 🎯 Live coding sessions
+- Step-by-step tutorials
+- Interactive code examples
+- Real performance data
+- Live coding sessions
 
-Follow along and build something amazing! 🚀
+Follow along and build something amazing!
 
 ---
 
-*P.S. - If you found this helpful, I'd love to connect! Drop me a message and let's build something incredible together.* 🚀
-    `,
+*P.S. - If you found this helpful, I'd love to connect! Drop me a message and let's build something incredible together.*`,
     date: "2024-12-19",
-    readTime: "8 min read",
+    readTime: "12 min read",
     category: "Portfolio Development",
-    tags: ["Next.js", "TypeScript", "Portfolio", "UI Components"]
+    tags: ["Next.js", "TypeScript", "Portfolio", "Career"]
   },
   {
     id: 2,
     slug: "interactive-ui-components-framer-motion",
     title: "Creating Interactive UI Components with Framer Motion",
     excerpt: "How I built the floating navigation, animated hero sections, and interactive project cards using Framer Motion and custom CSS animations for a modern user experience.",
-    content: `
-# 🎭 Creating Interactive UI Components: The Art of Micro-Interactions
+    content: `# Creating Interactive UI Components with Framer Motion
 
-*"How I turned a boring portfolio into an engaging experience that keeps visitors scrolling"*
+Animation is crucial for creating engaging user experiences. In my portfolio, I used Framer Motion to bring life to static components and guide user attention.
 
-## 🎬 The Animation Revolution
+## The Floating Navigation
 
-Remember when websites were just static pages with text and images? Those days are over. Today, users expect smooth, delightful interactions that make them feel like they're using a premium app, not reading a document.
+The floating navigation bar is one of the most interactive elements. It features:
+- Smooth slide-in animation on page load
+- Hover effects with scale transformations
+- Active state indicators
+- Responsive behavior for mobile devices
 
-The Problem: Most developer portfolios are... well, boring. They show code, projects, and skills, but they don't feel like the work of a creative developer.
+## Hero Section Animations
 
-The Solution: Strategic animations that tell a story and guide user attention.
+The hero section uses several animation techniques:
+- Staggered text animations for the main heading
+- Parallax effects for background elements
+- Smooth transitions between different states
+- Loading animations for better perceived performance
 
-## 🎯 The Psychology Behind Animations
+## Project Card Interactions
 
-### Why Animations Matter: The Science
-Let me explain the psychology behind why animations work so well:
+Each project card includes:
+- Hover effects with scale and shadow changes
+- Smooth transitions between states
+- Interactive elements that respond to user input
+- Loading states for images and content
 
-```
-🧠 User Brain Processing
-┌─────────────────────────────────────┐
-│  Static Element                     │
-│  ┌─────────┐                       │
-│  │  Text   │ ← Takes 2-3 seconds   │
-│  └─────────┘   to process          │
-└─────────────────────────────────────┘
+## Performance Considerations
 
-┌─────────────────────────────────────┐
-│  Animated Element                   │
-│  ┌─────────┐ ← Captures attention   │
-│  │  Text   │   in 0.5 seconds      │
-│  └─────────┘                       │
-│      ↓                             │
-│  User focuses here first!          │
-└─────────────────────────────────────┘
-```
+While animations enhance UX, they can impact performance:
+- Used transform and opacity for GPU acceleration
+- Implemented will-change for elements that will animate
+- Reduced motion for users with accessibility preferences
+- Optimized animation timing for smooth 60fps performance
 
-### The Animation Hierarchy: Where to Focus
-Think of animations like a movie - you need different types for different scenes:
+## Code Examples
 
-```
-🎬 Animation Movie Script
-├── 🎭 Opening Scene (Hero Animations)
-│   ├── Fade in title
-│   ├── Stagger text appearance
-│   └── Button entrance
-│
-├── 🎪 Supporting Cast (Navigation)
-│   ├── Smooth slide-in
-│   ├── Hover effects
-│   └── Active state changes
-│
-├── 📖 Story Development (Content)
-│   ├── Scroll-triggered reveals
-│   ├── Image loading animations
-│   └── Text flow animations
-│
-└── 🎁 Easter Eggs (Micro-interactions)
-    ├── Button hover effects
-    ├── Card flip animations
-    └── Loading spinners
-```
+Here's how I implemented the floating navigation animation:
 
-### The Attention Flow Diagram
-Here's how users' eyes move through your portfolio:
-
-```
-👀 User Attention Flow
-┌─────────────────────────────────────┐
-│ 1. Hero Section (3 seconds)        │
-│    ↓ (Animation guides here)       │
-│ 2. Navigation (0.5 seconds)        │
-│    ↓ (Smooth transition)           │
-│ 3. Projects (5-10 seconds)         │
-│    ↓ (Hover effects keep interest) │
-│ 4. About/Blog (2-5 seconds)        │
-│    ↓ (Scroll animations)           │
-│ 5. Contact (1-2 seconds)           │
-└─────────────────────────────────────┘
-```
-
-### Real Performance Data
-Here's what I measured on my portfolio:
-
-| Animation Type | Attention Time | Engagement Rate | Conversion Impact |
-|----------------|----------------|-----------------|-------------------|
-| Static Text    | 2.3 seconds    | 15%            | Baseline          |
-| Fade In        | 4.1 seconds    | 28%            | +87%             |
-| Staggered      | 6.2 seconds    | 45%            | +200%            |
-| Interactive    | 8.7 seconds    | 67%            | +347%            |
-
-## 🚀 The Floating Navigation: A Masterclass in UX
-
-### The Challenge
-Create a navigation that:
-- ✅ Doesn't take up precious screen space
-- ✅ Is always accessible
-- ✅ Feels premium and smooth
-- ✅ Works perfectly on mobile
-
-### The Solution: Floating Magic
-
-Let me break down this code step by step so you understand exactly how it works:
-
-#### Step 1: State Management
-```tsx
-const [isVisible, setIsVisible] = useState(false);
-```
-**What this does**: Creates a boolean state that tracks whether the nav should be visible
-**Why it matters**: We only show the nav when user scrolls down (saves screen space)
-
-#### Step 2: Scroll Detection
-```tsx
-useEffect(() => {
-  const handleScroll = () => {
-    setIsVisible(window.scrollY > 100); // Show nav after 100px scroll
-  };
-  
-  window.addEventListener('scroll', handleScroll);
-  return () => window.removeEventListener('scroll', handleScroll);
-}, []);
-```
-**What this does**: Listens for scroll events and updates visibility
-**Why 100px**: Magic number - enough scroll to show user is engaged
-**Cleanup**: Removes listener when component unmounts (prevents memory leaks)
-
-#### Step 3: Animation Logic
-```tsx
-<motion.nav
-  initial={{ y: -100, opacity: 0 }}     // Start hidden above screen
-  animate={{ 
-    y: isVisible ? 0 : -100,            // Move to top when visible
-    opacity: isVisible ? 1 : 0          // Fade in/out
-  }}
-  transition={{ 
-    type: "spring",                     // Natural physics
-    stiffness: 100,                     // How bouncy (0-300)
-    damping: 20                         // How much bounce (0-40)
-  }}
->
-```
-
-#### Visual Breakdown of the Animation
-```
-📱 User Scrolls Down
-┌─────────────────────────────────────┐
-│  Hero Section (100px)              │
-│  ┌─────────────────────────────────┐ │
-│  │  Nav appears here!              │ │ ← y: 0, opacity: 1
-│  └─────────────────────────────────┘ │
-│  Content continues...               │
-└─────────────────────────────────────┘
-
-📱 User Scrolls Back Up
-┌─────────────────────────────────────┐
-│  ┌─────────────────────────────────┐ │ ← y: -100, opacity: 0
-│  │  Nav slides up and fades out    │ │
-│  └─────────────────────────────────┘ │
-│  Hero Section                      │
-│  Content continues...               │
-└─────────────────────────────────────┘
-```
-
-#### The Complete Component
-```tsx
-// The floating nav that users actually love
-const FloatingNav = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsVisible(window.scrollY > 100);
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  return (
-    <motion.nav
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ 
-        y: isVisible ? 0 : -100, 
-        opacity: isVisible ? 1 : 0 
-      }}
-      transition={{ 
-        type: "spring", 
-        stiffness: 100, 
-        damping: 20 
-      }}
-      className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50"
-    >
-      {/* Navigation content */}
-    </motion.nav>
-  );
-};
-```
-
-The Magic: 
-- 🎯 Spring Physics: Feels natural, not robotic
-- ⚡ Performance: Uses transform (GPU accelerated)
-- 📱 Responsive: Adapts to any screen size
-- ♿ Accessible: Respects reduced motion preferences
-
-## 🎨 Hero Section: The First 3 Seconds
-
-### The Psychology
-Users decide if they'll stay on your site in the first 3 seconds. Your hero section is make-or-break.
-
-### The Animation Strategy
-\`\`\`tsx
-// The hero that converts visitors into fans
-const Hero = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2, // Each child animates 0.2s after the previous
-        delayChildren: 0.3
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100
-      }
-    }
-  };
-
-  return (
-    <motion.div
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      className="hero-container"
-    >
-      <motion.h1 variants={itemVariants}>
-        Hi, I'm <span className="text-purple">Trilanka</span>
-      </motion.h1>
-      <motion.p variants={itemVariants}>
-        I build digital experiences that users love
-      </motion.p>
-      <motion.div variants={itemVariants}>
-        <MagicButton />
-      </motion.div>
-    </motion.div>
-  );
-};
-\`\`\`
-
-The Result: 
-- 👀 Attention: Staggered animations guide the eye
-- ⏱️ Timing: 0.3s delay feels natural, not rushed
-- 🎭 Personality: Spring physics show creativity
-- 📱 Performance: 60fps on all devices
-
-## 🎪 Project Cards: The Gallery That Engages
-
-### The Problem
-Project galleries are usually boring. Users scroll past them without engaging.
-
-### The Solution: Interactive Storytelling
-\`\`\`tsx
-// Project cards that users actually want to explore
-const ProjectCard = ({ project }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  
-  return (
-    <motion.div
-      whileHover={{ 
-        scale: 1.05,
-        rotateY: 5,
-        transition: { duration: 0.3 }
-      }}
-      whileTap={{ scale: 0.95 }}
-      onHoverStart={() => setIsHovered(true)}
-      onHoverEnd={() => setIsHovered(false)}
-      className="project-card"
-    >
-      <motion.div
-        animate={{
-          scale: isHovered ? 1.1 : 1,
-          transition: { duration: 0.3 }
-        }}
-        className="project-image"
-      >
-        <Image src={project.image} alt={project.title} />
-      </motion.div>
-      
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ 
-          opacity: isHovered ? 1 : 0,
-          y: isHovered ? 0 : 20
-        }}
-        className="project-overlay"
-      >
-        <h3>{project.title}</h3>
-        <p>{project.description}</p>
-        <div className="tech-stack">
-          {project.technologies.map(tech => (
-            <span key={tech} className="tech-tag">{tech}</span>
-          ))}
-        </div>
-      </motion.div>
-    </motion.div>
-  );
-};
-\`\`\`
-
-The Magic:
-- 🎯 3D Effect: Subtle rotateY creates depth
-- 📖 Progressive Disclosure: Info appears on hover
-- 🎨 Visual Hierarchy: Scale draws attention
-- ⚡ Smooth Transitions: 0.3s feels responsive
-
-## 🎭 The Magic Button: Micro-Interaction Mastery
-
-### The Challenge
-Create a button that users can't resist clicking.
-
-### The Solution: Multi-Layer Animation
-\`\`\`tsx
-// The button that gets clicked 300% more than regular buttons
-const MagicButton = () => {
-  return (
-    <motion.button
-      whileHover={{ 
-        scale: 1.05,
-        boxShadow: "0 10px 30px rgba(139, 92, 246, 0.3)"
-      }}
-      whileTap={{ scale: 0.95 }}
-      className="magic-button"
-    >
-      <motion.span
-        animate={{
-          backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-        }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-        className="button-gradient"
-      >
-        Let's Build Something Amazing
-      </motion.span>
-      
-      <motion.div
-        whileHover={{ x: 5 }}
-        className="arrow-icon"
-      >
-        →
-      </motion.div>
-    </motion.button>
-  );
-};
-\`\`\`
-
-The Psychology:
-- 🌈 Gradient Animation: Draws the eye
-- 📏 Scale Feedback: Confirms interaction
-- ➡️ Arrow Movement: Suggests action
-- ✨ Glow Effect: Feels premium
-
-## ⚡ Performance: The Art of Smooth 60fps
-
-### The Golden Rules
-1. Use Transform & Opacity: GPU accelerated
-2. Avoid Layout Thrashing: No width/height changes
-3. Respect Reduced Motion: Accessibility first
-4. Optimize for Mobile: 60fps on all devices
-
-### Performance Monitoring
-\`\`\`tsx
-// Performance-aware animations
-const useReducedMotion = () => {
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
-  
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setPrefersReducedMotion(mediaQuery.matches);
-    
-    const handler = (e) => setPrefersReducedMotion(e.matches);
-    mediaQuery.addEventListener('change', handler);
-    return () => mediaQuery.removeEventListener('change', handler);
-  }, []);
-  
-  return prefersReducedMotion;
-};
-
-// Usage in components
-const MyComponent = () => {
-  const prefersReducedMotion = useReducedMotion();
-  
-  return (
-    <motion.div
-      animate={prefersReducedMotion ? {} : { 
-        scale: [1, 1.1, 1],
-        transition: { duration: 2, repeat: Infinity }
-      }}
-    >
-      Content
-    </motion.div>
-  );
-};
-\`\`\`
-
-## 📊 The Results: Numbers Don't Lie
-
-### Before Animations
-- ⏱️ Average Time on Site: 45 seconds
-- 👆 Click-Through Rate: 2.3%
-- 📱 Mobile Engagement: 15%
-- 😴 Bounce Rate: 78%
-
-### After Animations
-- ⏱️ Average Time on Site: 2 minutes 30 seconds (+233%)
-- 👆 Click-Through Rate: 8.7% (+278%)
-- 📱 Mobile Engagement: 45% (+200%)
-- 😴 Bounce Rate: 34% (-56%)
-
-### User Feedback
-> *"This is the most engaging portfolio I've ever seen!"* - Senior Developer at Google
-
-> *"The animations are so smooth, it feels like a premium app."* - UX Designer at Apple
-
-> *"I spent 10 minutes just playing with the interactions!"* - Frontend Developer at Netflix
-
-## 🎯 The Animation Checklist
-
-### ✅ What Makes Animations Great
-- [ ] Purposeful: Every animation serves a function
-- [ ] Smooth: 60fps on all devices
-- [ ] Accessible: Respects user preferences
-- [ ] Consistent: Follows design system
-- [ ] Performance: No layout thrashing
-- [ ] Branded: Reflects your personality
-
-### ❌ Common Animation Mistakes
-- [ ] Over-animation: Too much movement
-- [ ] Poor timing: Too fast or too slow
-- [ ] No purpose: Animations for the sake of it
-- [ ] Performance issues: Laggy on mobile
-- [ ] Accessibility ignored: No reduced motion support
-- [ ] Inconsistent: Different timing everywhere
-
-## 🚀 Advanced Techniques
-
-### Staggered Animations
-\`\`\`tsx
-// Create a wave effect that guides the eye
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
+const navVariants = {
+  hidden: { y: -100, opacity: 0 },
+  visible: { 
+    y: 0, 
     opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2
-    }
+    transition: { duration: 0.5, ease: "easeOut" }
   }
 };
-\`\`\`
 
-### Scroll-Triggered Animations
-\`\`\`tsx
-// Animate elements as they come into view
-const useInView = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-  
-  return [ref, isInView];
-};
-\`\`\`
-
-### Gesture-Based Interactions
-\`\`\`tsx
-// Swipe and drag interactions
-<motion.div
-  drag
-  dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-  whileDrag={{ scale: 1.1 }}
-  className="draggable-card"
->
-  Drag me!
-</motion.div>
-\`\`\`
-
-## 🎉 The Bottom Line
-
-Animations aren't just pretty effects—they're powerful tools for:
-- 🎯 Guiding attention to important content
-- 😊 Creating emotional connections with users
-- 📱 Improving usability on mobile devices
-- 🏆 Standing out from the competition
-- 💼 Landing more opportunities (seriously!)
-
-The secret: Start simple, test everything, and always prioritize user experience over flashy effects.
-
-Want to learn more? I'm creating a complete animation course that covers everything from basic transitions to advanced gesture interactions. Stay tuned! 🚀
-
----
-
-*P.S. - The animations in this portfolio increased my job interview rate by 300%. True story.* ✨
-    `,
+The result is a portfolio that feels alive and responsive to user interactions while maintaining excellent performance.`,
     date: "2024-12-18",
     readTime: "6 min read",
     category: "UI/UX",
@@ -966,8 +477,7 @@ Want to learn more? I'm creating a complete animation course that covers everyth
     slug: "responsive-design-patterns-react",
     title: "Responsive Design Patterns in Modern React Applications",
     excerpt: "Exploring responsive design techniques used in this portfolio, from mobile-first approach to complex grid layouts and adaptive typography using Tailwind CSS.",
-    content: `
-# Responsive Design Patterns in Modern React Applications
+    content: `# Responsive Design Patterns in Modern React Applications
 
 Creating a responsive portfolio requires careful planning and implementation. Here's how I approached responsive design for my portfolio.
 
@@ -975,7 +485,7 @@ Creating a responsive portfolio requires careful planning and implementation. He
 
 I started with mobile design and progressively enhanced for larger screens:
 - Base styles target mobile devices (320px+)
-- Breakpoints: \`sm:\` (640px), \`md:\` (768px), \`lg:\` (1024px), \`xl:\` (1280px)
+- Breakpoints: sm: (640px), md: (768px), lg: (1024px), xl: (1280px)
 - Content prioritization for smaller screens
 
 ## Grid Layouts
@@ -984,7 +494,7 @@ I started with mobile design and progressively enhanced for larger screens:
 - Mobile: Single column
 - Tablet: 2 columns
 - Desktop: 3 columns
-- Uses CSS Grid with \`grid-template-columns\` and responsive classes
+- Uses CSS Grid with grid-template-columns and responsive classes
 
 ### Blog Grid
 - Responsive grid that adapts to content
@@ -1015,8 +525,7 @@ I tested across multiple devices and browsers:
 - Cross-browser compatibility checks
 - Performance testing on slower connections
 
-The result is a portfolio that works beautifully on any device, from mobile phones to large desktop monitors.
-    `,
+The result is a portfolio that works beautifully on any device, from mobile phones to large desktop monitors.`,
     date: "2024-12-17",
     readTime: "7 min read",
     category: "Responsive Design",
@@ -1027,14 +536,12 @@ The result is a portfolio that works beautifully on any device, from mobile phon
     slug: "component-architecture-state-management",
     title: "Component Architecture and State Management in Next.js",
     excerpt: "Breaking down the component structure of this portfolio, including custom hooks, context providers, and how I organized the codebase for maintainability and scalability.",
-    content: `
-# Component Architecture and State Management in Next.js
+    content: `# Component Architecture and State Management in Next.js
 
 A well-structured codebase is essential for maintainability and scalability. Here's how I organized my portfolio's architecture.
 
 ## Folder Structure
 
-\`\`\`
 /app
   /blog
     /[slug]
@@ -1052,24 +559,23 @@ A well-structured codebase is essential for maintainability and scalability. Her
   Hero.tsx
   Projects.tsx
   ...
-\`\`\`
 
 ## Component Organization
 
 ### Page Components
-- Located in \`/app\` directory
+- Located in /app directory
 - Use Next.js 14 App Router
 - Handle routing and data fetching
 - Minimal logic, mostly composition
 
 ### UI Components
-- Reusable components in \`/components/ui\`
+- Reusable components in /components/ui
 - Pure components with props interface
 - No side effects or business logic
 - Highly testable
 
 ### Feature Components
-- Domain-specific components in \`/components\`
+- Domain-specific components in /components
 - Contain business logic
 - Connect to data sources
 - Handle user interactions
@@ -1077,17 +583,17 @@ A well-structured codebase is essential for maintainability and scalability. Her
 ## State Management
 
 For this portfolio, I used:
-- **Local State**: React's \`useState\` for component-specific state
-- **Context**: For theme and global state
-- **URL State**: For navigation and routing
-- **No External Libraries**: Keeping dependencies minimal
+- Local State: React's useState for component-specific state
+- Context: For theme and global state
+- URL State: For navigation and routing
+- No External Libraries: Keeping dependencies minimal
 
 ## Custom Hooks
 
 Created reusable hooks for common patterns:
-- \`useLocalStorage\` for persisting user preferences
-- \`useIntersectionObserver\` for scroll-based animations
-- \`useMediaQuery\` for responsive behavior
+- useLocalStorage for persisting user preferences
+- useIntersectionObserver for scroll-based animations
+- useMediaQuery for responsive behavior
 
 ## TypeScript Integration
 
@@ -1104,8 +610,7 @@ Strong typing throughout:
 - Memoization for expensive calculations
 - Optimized re-renders with proper dependencies
 
-This architecture makes the codebase easy to understand, maintain, and extend as the portfolio grows.
-    `,
+This architecture makes the codebase easy to understand, maintain, and extend as the portfolio grows.`,
     date: "2024-12-16",
     readTime: "9 min read",
     category: "Architecture",
@@ -1116,8 +621,7 @@ This architecture makes the codebase easy to understand, maintain, and extend as
     slug: "performance-optimization-portfolio",
     title: "Performance Optimization Techniques for Portfolio Websites",
     excerpt: "Implementing lazy loading, image optimization, and bundle splitting to ensure fast loading times and smooth user experience across all devices and network conditions.",
-    content: `
-# Performance Optimization Techniques for Portfolio Websites
+    content: `# Performance Optimization Techniques for Portfolio Websites
 
 Performance is crucial for user experience and SEO. Here's how I optimized my portfolio for speed and efficiency.
 
@@ -1191,8 +695,7 @@ Performance is crucial for user experience and SEO. Here's how I optimized my po
 - Chrome DevTools for debugging
 - Real User Monitoring (RUM)
 
-The result is a portfolio that loads quickly and provides a smooth experience across all devices and network conditions.
-    `,
+The result is a portfolio that loads quickly and provides a smooth experience across all devices and network conditions.`,
     date: "2024-12-15",
     readTime: "5 min read",
     category: "Performance",
@@ -1203,8 +706,7 @@ The result is a portfolio that loads quickly and provides a smooth experience ac
     slug: "deploying-nextjs-portfolio-static",
     title: "Deploying a Next.js Portfolio with Static Site Generation",
     excerpt: "Step-by-step guide to deploying this portfolio using Next.js static export, including build optimization, asset management, and hosting considerations.",
-    content: `
-# Deploying a Next.js Portfolio with Static Site Generation
+    content: `# Deploying a Next.js Portfolio with Static Site Generation
 
 Deploying a portfolio requires careful consideration of hosting options, build processes, and performance optimization.
 
@@ -1218,7 +720,7 @@ Deploying a portfolio requires careful consideration of hosting options, build p
 - Global CDN distribution
 
 ### Next.js Static Export
-- \`next export\` command for static generation
+- next export command for static generation
 - Pre-renders all pages at build time
 - Generates static HTML, CSS, and JS files
 - No server-side rendering needed
@@ -1226,7 +728,6 @@ Deploying a portfolio requires careful consideration of hosting options, build p
 ## Build Configuration
 
 ### next.config.mjs
-\`\`\`javascript
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
@@ -1237,11 +738,10 @@ const nextConfig = {
 };
 
 export default nextConfig;
-\`\`\`
 
 ### Build Process
-1. Run \`npm run build\`
-2. Static files generated in \`/out\` directory
+1. Run npm run build
+2. Static files generated in /out directory
 3. Upload to any static hosting service
 4. Configure custom domain if needed
 
@@ -1295,8 +795,7 @@ export default nextConfig;
 - [ ] Mobile responsiveness verified
 - [ ] Performance metrics acceptable
 
-The result is a fast, reliable, and globally accessible portfolio that showcases your work effectively.
-    `,
+The result is a fast, reliable, and globally accessible portfolio that showcases your work effectively.`,
     date: "2024-12-14",
     readTime: "6 min read",
     category: "Deployment",
