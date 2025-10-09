@@ -77,118 +77,72 @@ const Projects = () => {
   };
 
   return (
-    <div className="py-20 border-b border-neutral-800">
-      <motion.h1 
-        className="heading py-20"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        Recent <span className="text-purple">Projects</span>
-      </motion.h1>
-
-      {/* Horizontal Scrollable Projects */}
-      <motion.div 
-        className="relative"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        viewport={{ once: true }}
-      >
-        {/* Scroll buttons - only visible on non-touch devices */}
-        <motion.button
-          onClick={scrollLeft}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 hidden md:flex items-center justify-center w-12 h-12 bg-black-200/80 backdrop-blur-sm border border-white/20 rounded-full text-white hover:bg-white/10 transition-all duration-300"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+    <div className="py-24 px-6 sm:px-8 lg:px-12 xl:px-16">
+      <div className="max-w-6xl mx-auto">
+        <motion.h1 
+          className="text-5xl sm:text-6xl lg:text-7xl font-light text-white mb-20 text-center tracking-tight"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
         >
-          <FaChevronLeft className="text-sm" />
-        </motion.button>
+          Recent Projects
+        </motion.h1>
 
-        <motion.button
-          onClick={scrollRight}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 hidden md:flex items-center justify-center w-12 h-12 bg-black-200/80 backdrop-blur-sm border border-white/20 rounded-full text-white hover:bg-white/10 transition-all duration-300"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+        {/* Projects Grid */}
+        <motion.div 
+          className="grid md:grid-cols-2 lg:grid-cols-2 gap-8"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+          viewport={{ once: true }}
         >
-          <FaChevronRight className="text-sm" />
-        </motion.button>
-
-        {/* Gradient overlays for scroll indication */}
-        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-black-100 to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-black-100 to-transparent z-10 pointer-events-none"></div>
-        
-        {/* Scrollable container */}
-        <div ref={scrollContainerRef} className="overflow-x-auto scrollbar-hide pb-4">
-          <div className="flex gap-8 px-8" style={{ width: 'max-content' }}>
-            {projects.map((project, index) => (
-              <motion.div
-                key={project.id}
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                onMouseEnter={() => setHoveredProject(project.id)}
-                onMouseLeave={() => setHoveredProject(null)}
-                className="flex-shrink-0"
-              >
-                <CardSpotlight className="h-96 w-80 cursor-pointer group">
-                  <div 
-                    className={`h-full w-full p-6 rounded-2xl bg-gradient-to-br ${project.gradient} border border-white/10 relative overflow-hidden`}
-                    onClick={() => handleProjectClick(project.id)}
-                  >
-                    {/* Background pattern */}
-                    <div className="absolute inset-0 opacity-5">
-                      <div className="absolute top-4 right-4 text-6xl">{project.icon}</div>
-                    </div>
-                    
-                    {/* Content */}
-                    <div className="relative z-10 h-full flex flex-col">
-                      {/* Category badge */}
-                      <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-xs font-medium text-white/80 mb-4 w-fit">
-                        {project.category}
-                      </div>
-                      
-                      {/* Title */}
-                      <h3 className="text-xl font-bold text-white mb-3 leading-tight">
-                        {project.title}
-                      </h3>
-                      
-                      {/* Description */}
-                      <p className="text-white/70 text-sm leading-relaxed flex-grow">
-                        {project.description}
-                      </p>
-                      
-                      {/* Action button */}
-                      <motion.div 
-                        className="mt-6 flex items-center justify-between"
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ 
-                          opacity: hoveredProject === project.id ? 1 : 0,
-                          y: hoveredProject === project.id ? 0 : 10
-                        }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <span className="text-white/60 text-sm font-medium">View Details</span>
-                        <FaExternalLinkAlt className="text-white/60 text-sm" />
-                      </motion.div>
-                    </div>
-                    
-                    {/* Hover overlay */}
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: hoveredProject === project.id ? 1 : 0 }}
-                      transition={{ duration: 0.2 }}
-                    />
-                  </div>
-                </CardSpotlight>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.div>
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.1, ease: "easeOut" }}
+              viewport={{ once: true }}
+              onMouseEnter={() => setHoveredProject(project.id)}
+              onMouseLeave={() => setHoveredProject(null)}
+              className="group cursor-pointer"
+              onClick={() => handleProjectClick(project.id)}
+            >
+              <div className="bg-white/5 p-8 rounded-3xl border border-white/10 backdrop-blur-sm hover:bg-white/8 transition-all duration-300 h-full">
+                {/* Category badge */}
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm font-medium text-white/80 mb-6">
+                  {project.category}
+                </div>
+                
+                {/* Title */}
+                <h3 className="text-2xl font-medium text-white mb-4 leading-tight">
+                  {project.title}
+                </h3>
+                
+                {/* Description */}
+                <p className="text-gray-400 text-lg leading-relaxed font-light mb-6">
+                  {project.description}
+                </p>
+                
+                {/* Action button */}
+                <motion.div 
+                  className="flex items-center gap-2 text-white/60"
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ 
+                    opacity: hoveredProject === project.id ? 1 : 0.6,
+                    x: hoveredProject === project.id ? 0 : -10
+                  }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <span className="text-sm font-medium">View Details</span>
+                  <FaExternalLinkAlt className="text-sm" />
+                </motion.div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
     </div>
   );
 };

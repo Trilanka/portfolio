@@ -9,8 +9,23 @@ import Techstack from "@/components/Techstack";
 
 export default function Home() {
   return (
-  <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
-    <div className="max-w-7xl w-full">
+  <main className="relative bg-black min-h-screen overflow-hidden">
+    {/* Subtle Light Beam Effects */}
+    <div className="absolute inset-0 overflow-hidden">
+      {/* Main light beam from top */}
+      <div className="absolute -top-40 -left-1/4 w-full h-96 bg-gradient-to-b from-white/5 via-white/3 to-transparent rounded-full blur-3xl"></div>
+      
+      {/* Secondary light beam from right */}
+      <div className="absolute top-1/4 -right-1/4 w-96 h-96 bg-gradient-to-l from-white/4 via-white/2 to-transparent rounded-full blur-3xl"></div>
+      
+      {/* Accent light beam from bottom left */}
+      <div className="absolute -bottom-40 -left-1/3 w-80 h-80 bg-gradient-to-t from-white/3 via-white/1 to-transparent rounded-full blur-3xl"></div>
+      
+      {/* Subtle radial gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/20"></div>
+    </div>
+
+    <div className="relative z-10 w-full">
       <FloatingNav navItems={[
         {name: 'Home', link: '/', icon: <FaHome />},
         {name: 'About', link: '/about', icon: <FaUser />},
@@ -21,7 +36,6 @@ export default function Home() {
       {/* <RecentProjects /> */}
       {/* <Clients /> */}
       <Projects />
-      {/* <Leadership /> */}
       <Techstack />
       <Footer />
     </div>

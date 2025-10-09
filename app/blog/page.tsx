@@ -8,7 +8,7 @@ import Link from 'next/link';
 const blogPosts = [
   {
     id: 1,
-    slug: "building-portfolio-nextjs-14",
+    slug: "Relational Database Schema for Real Time Messaging System",
     title: "🚀 From Zero to Hero: How I Built a Portfolio That Landed Me 12 Job Interviews",
     excerpt: "The complete roadmap from boring portfolio to stunning showcase. Learn the exact steps, tech stack decisions, and performance optimizations that made recruiters say 'WOW!'",
     date: "2024-12-19",
@@ -18,36 +18,16 @@ const blogPosts = [
   },
   {
     id: 2,
-    slug: "interactive-ui-components-framer-motion",
-    title: "🎭 The Animation Revolution: How Micro-Interactions Increased My Job Interview Rate by 300%",
-    excerpt: "Discover the psychology behind animations and learn how to create engaging UI components that keep visitors scrolling. Real code examples and performance tips included.",
-    date: "2024-12-18",
-    readTime: "10 min read",
-    category: "UI/UX",
-    tags: ["Framer Motion", "Animations", "Psychology", "Performance"]
-  },
-  {
-    id: 3,
-    slug: "responsive-design-patterns-react",
-    title: "📱 Mobile-First Magic: How I Made My Portfolio Look Perfect on Every Device",
-    excerpt: "The complete guide to responsive design that actually works. Learn the mobile-first approach, CSS Grid secrets, and typography scaling techniques that made my portfolio shine on all screens.",
-    date: "2024-12-17",
-    readTime: "8 min read",
-    category: "Responsive Design",
-    tags: ["Mobile-First", "CSS Grid", "Typography", "Breakpoints"]
-  },
-  {
-    id: 4,
-    slug: "component-architecture-state-management",
+    slug: "AWS Network Architecture and Security",
     title: "🏗️ The Architecture That Scales: How I Organized 50+ Components Without Losing My Mind",
-    excerpt: "Discover the folder structure and component patterns that keep large React applications maintainable. Real examples from my portfolio with custom hooks and state management strategies.",
+    excerpt: "In this Blog you will discover how AWS use their architectures to localize and provide better approach in its networking and security.",
     date: "2024-12-16",
     readTime: "11 min read",
     category: "Architecture",
     tags: ["Component Architecture", "Custom Hooks", "State Management", "Scalability"]
   },
   {
-    id: 5,
+    id: 3,
     slug: "performance-optimization-portfolio",
     title: "⚡ Speed Demon: How I Achieved 96/100 Lighthouse Score and 1.2s Load Time",
     excerpt: "The performance optimization techniques that made my portfolio lightning fast. Learn about image optimization, code splitting, and bundle analysis that actually work in production.",
@@ -57,7 +37,7 @@ const blogPosts = [
     tags: ["Lighthouse", "Bundle Optimization", "Image Optimization", "Core Web Vitals"]
   },
   {
-    id: 6,
+    id: 4,
     slug: "deploying-nextjs-portfolio-static",
     title: "🚀 From Localhost to Global: The Complete Deployment Guide That Actually Works",
     excerpt: "Step-by-step deployment guide with real results. Learn how to deploy your Next.js portfolio with static generation, set up custom domains, and achieve 99.9% uptime.",
@@ -70,8 +50,23 @@ const blogPosts = [
 
 export default function BlogPage() {
   return (
-    <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5 min-h-screen">
-      <div className="max-w-7xl w-full">
+    <main className="relative bg-black min-h-screen overflow-hidden">
+      {/* Subtle Light Beam Effects */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Main light beam from top */}
+        <div className="absolute -top-40 -left-1/4 w-full h-96 bg-gradient-to-b from-white/5 via-white/3 to-transparent rounded-full blur-3xl"></div>
+        
+        {/* Secondary light beam from right */}
+        <div className="absolute top-1/4 -right-1/4 w-96 h-96 bg-gradient-to-l from-white/4 via-white/2 to-transparent rounded-full blur-3xl"></div>
+        
+        {/* Accent light beam from bottom left */}
+        <div className="absolute -bottom-40 -left-1/3 w-80 h-80 bg-gradient-to-t from-white/3 via-white/1 to-transparent rounded-full blur-3xl"></div>
+        
+        {/* Subtle radial gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/20"></div>
+      </div>
+
+      <div className="relative z-10 max-w-7xl w-full mx-auto sm:px-10 px-5">
         <FloatingNav navItems={[
           {name: 'Home', link: '/', icon: <FaHome />},
           {name: 'About', link: '/about', icon: <FaUser />},
