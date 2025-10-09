@@ -44,7 +44,7 @@ const AHero = () => {
               className="mt-12 flex justify-center lg:justify-start"
             >
               <a 
-                href="/Trilanka_Beddegama_CV.pdf" 
+                href="./Trilanka_Beddegama_CV.pdf" 
                 download="Trilanka_Beddegama_CV.pdf"
                 className="px-8 py-4 border border-white/20 text-white rounded-full font-medium hover:bg-white/10 transition-colors duration-300 inline-flex items-center gap-2"
               >
