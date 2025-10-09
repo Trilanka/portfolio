@@ -112,7 +112,7 @@ const DroneProject = () => {
           </h1>
           
           <p className="text-xl text-white-200 max-w-4xl mx-auto leading-relaxed">
-            A four-year engineering journey from basic electronics to winning Sri Lanka&apos;s most prestigious drone competition.
+            A four-year engineering journey from basic electronics to winning {`Sri Lanka's`} most prestigious drone competition.
           </p>
         </motion.div>
 
@@ -130,7 +130,7 @@ const DroneProject = () => {
                 This project represents one of my most ambitious and transformative engineering journeys. What began as a simple idea during my early undergraduate days — to build a drone using the limited resources I had — evolved over four years into a fully functional, competition-grade UAV.
               </p>
               <p className="text-white-200 leading-relaxed">
-                By the end of this journey, my team and I secured first place in Sri Lanka&apos;s most prestigious drone competition, a milestone that marked both technical mastery and relentless perseverance.
+                By the end of this journey, my team and I secured first place in {`Sri Lanka's`} most prestigious drone competition, a milestone that marked both technical mastery and relentless perseverance.
               </p>
             </div>
           </div>
@@ -238,7 +238,7 @@ const DroneProject = () => {
             </div>
             <h2 className="text-2xl font-bold text-white mb-4">🏆 Achievements</h2>
             <p className="text-white-200 leading-relaxed text-lg">
-              After four years of continuous development, my drone achieved stable flight, autonomous navigation, and excellent performance metrics. This culminated in winning Sri Lanka&apos;s highest-level drone competition, a recognition of both engineering excellence and perseverance.
+              After four years of continuous development, my drone achieved stable flight, autonomous navigation, and excellent performance metrics. This culminated in winning {`Sri Lanka's`} highest-level drone competition, a recognition of both engineering excellence and perseverance.
             </p>
           </div>
         </motion.div>

@@ -79,10 +79,10 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Let&apos;s <span className="text-purple">Connect</span>
+            {`Let's`} <span className="text-purple">Connect</span>
           </h1>
           <p className="text-xl text-white-200 max-w-3xl mx-auto leading-relaxed">
-            Ready to collaborate on something amazing? I&apos;d love to hear about your project and discuss how we can work together.
+            Ready to collaborate on something amazing? {`I'd`} love to hear about your project and discuss how we can work together.
           </p>
         </motion.div>
 

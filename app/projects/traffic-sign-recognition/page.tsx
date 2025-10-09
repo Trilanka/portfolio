@@ -302,7 +302,7 @@ const TrafficSignRecognition = () => {
                   <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Paper Presentation</h4>
                     <p className="text-white-200 text-sm leading-relaxed">
-                      &ldquo;Traffic Sign Detection and Recognition for Next-Generation Advanced Driver Assistance Systems for Smart Transportation&rdquo;
+                      {`"Traffic Sign Detection and Recognition for Next-Generation Advanced Driver Assistance Systems for Smart Transportation"`}
                     </p>
                   </div>
                   
