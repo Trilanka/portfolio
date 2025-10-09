@@ -131,14 +131,6 @@ export const FloatingNav = ({
             </motion.div>
           );
         })}
-        <motion.button 
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          transition={{ duration: 0.2 }}
-          className="text-sm font-medium relative text-white/80 px-4 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-300"
-        >
-          <span>Contact</span>
-        </motion.button>
       </motion.div>
     </AnimatePresence>
   );
