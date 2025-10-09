@@ -321,7 +321,7 @@ const TrafficSignRecognition = () => {
                     <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-2xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
                     <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-4 overflow-hidden">
                       <img 
-                        src="./certificate.png" 
+                        src="/certificate.png" 
                         alt="PURSE 2024 Certificate - Traffic Sign Detection Research" 
                         className="w-full h-auto rounded-xl shadow-2xl hover:scale-105 transition-transform duration-300"
                       />
