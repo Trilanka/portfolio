@@ -3,7 +3,7 @@ import Projects from "@/components/Projects";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import { FaHome, FaBlog, FaUser } from "react-icons/fa";
+import { FaHome, FaBlog, FaUser, FaEnvelope } from "react-icons/fa";
 import Footer from "@/components/Footer";
 import Techstack from "@/components/Techstack";
 
@@ -29,7 +29,8 @@ export default function Home() {
       <FloatingNav navItems={[
         {name: 'Home', link: '/', icon: <FaHome />},
         {name: 'About', link: '/about', icon: <FaUser />},
-        {name: 'Blog', link: '/blog', icon: <FaBlog />}
+        {name: 'Blog', link: '/blog', icon: <FaBlog />},
+        {name: 'Contact', link: '/contact', icon: <FaEnvelope />}
       ]} />
       <Hero/>
       {/* <Grid /> */}

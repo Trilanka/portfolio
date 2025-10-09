@@ -3,7 +3,7 @@ import Alead from "@/components/Alead";
 import ANavBar from "@/components/ANavBar";
 import Aunique from "@/components/Aunique";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import { FaHome, FaBlog, FaUser } from "react-icons/fa";
+import { FaHome, FaBlog, FaUser, FaEnvelope } from "react-icons/fa";
 
 
 export default function AboutPage() {
@@ -28,7 +28,8 @@ export default function AboutPage() {
       <FloatingNav navItems={[
         {name: 'Home', link: '/', icon: <FaHome />},
         {name: 'About', link: '/about', icon: <FaUser />},
-        {name: 'Blog', link: '/blog', icon: <FaBlog />}
+        {name: 'Blog', link: '/blog', icon: <FaBlog />},
+        {name: 'Contact', link: '/contact', icon: <FaEnvelope />}
       ]} />
 
       {/* Content */}

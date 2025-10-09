@@ -16,11 +16,19 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: "traffic-sign-recognition",
+    title: "Real-Time Traffic Sign Recognition for ADAS",
+    description: "Advanced AI system for real-time traffic sign detection using YOLOv8, deployed on NVIDIA Jetson AGX Xavier for autonomous driving applications.",
+    category: "AI/ML",
+    gradient: "from-blue-500/20 to-purple-600/20",
+    icon: "🚦"
+  },
+  {
     id: "stock-analysis",
     title: "Agentic Solution for Colombo Stock Market Analysis",
     description: "AI-powered financial analysis platform using machine learning algorithms to analyze market trends and provide intelligent investment insights.",
     category: "AI/ML",
-    gradient: "from-blue-500/20 to-purple-600/20",
+    gradient: "from-indigo-500/20 to-blue-600/20",
     icon: "📈"
   },
   {
@@ -38,14 +46,6 @@ const projects: Project[] = [
     category: "Full-Stack",
     gradient: "from-orange-500/20 to-red-600/20",
     icon: "✈️"
-  },
-  {
-    id: "portfolio",
-    title: "Personal Portfolio",
-    description: "Modern, responsive portfolio website showcasing technical skills and projects with interactive animations and smooth user experience.",
-    category: "Frontend",
-    gradient: "from-purple-500/20 to-pink-600/20",
-    icon: "💼"
   }
 ];
 
@@ -72,8 +72,15 @@ const Projects = () => {
   };
 
   const handleProjectClick = (projectId: string) => {
-    // TODO: Navigate to project detail page
-    console.log(`Navigate to project: ${projectId}`);
+    // Navigate to project detail page
+    if (projectId === 'traffic-sign-recognition') {
+      window.location.href = '/projects/traffic-sign-recognition';
+    } else if (projectId === 'drone-project') {
+      window.location.href = '/projects/drone-project';
+    } else {
+      // For other projects, you can add their detail pages later
+      console.log(`Navigate to project: ${projectId}`);
+    }
   };
 
   return (

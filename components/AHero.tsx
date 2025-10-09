@@ -41,14 +41,18 @@ const AHero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-              className="mt-12 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              className="mt-12 flex justify-center lg:justify-start"
             >
-              <button className="px-8 py-4 bg-white text-black rounded-full font-medium hover:bg-gray-100 transition-colors duration-300">
-                View My Work
-              </button>
-              <button className="px-8 py-4 border border-white/20 text-white rounded-full font-medium hover:bg-white/10 transition-colors duration-300">
+              <a 
+                href="/Trilanka_Beddegama_CV.pdf" 
+                download="Trilanka_Beddegama_CV.pdf"
+                className="px-8 py-4 border border-white/20 text-white rounded-full font-medium hover:bg-white/10 transition-colors duration-300 inline-flex items-center gap-2"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
                 Download CV
-              </button>
+              </a>
             </motion.div>
           </motion.div>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import { FaHome, FaBlog, FaUser } from "react-icons/fa";
+import { FaHome, FaBlog, FaUser, FaEnvelope } from "react-icons/fa";
 
 import Link from 'next/link';
 
@@ -90,7 +90,8 @@ export default function BlogPage() {
         <FloatingNav navItems={[
           {name: 'Home', link: '/', icon: <FaHome />},
           {name: 'About', link: '/about', icon: <FaUser />},
-          {name: 'Blog', link: '/blog', icon: <FaBlog />}
+          {name: 'Blog', link: '/blog', icon: <FaBlog />},
+          {name: 'Contact', link: '/contact', icon: <FaEnvelope />}
         ]} />
         
         {/* Header Section */}
