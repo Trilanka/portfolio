@@ -70,7 +70,7 @@ const Alead = () => {
           >
             <div className="relative bg-white/5 rounded-3xl border border-white/10 backdrop-blur-sm overflow-hidden">
               <Image 
-                src="./lead.jpg" 
+                src="/portfolio/lead.jpg" 
                 alt="Leadership experience" 
                 className="w-auto h-auto max-w-full"
                 width={500}

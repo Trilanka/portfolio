@@ -31,7 +31,7 @@ const Aunique = () => {
           >
             <div className="relative bg-white/5 rounded-3xl border border-white/10 backdrop-blur-sm overflow-hidden">
               <Image 
-                src="./win.jpg" 
+                src="/portfolio/win.jpg" 
                 alt="Trilanka winning drone competition" 
                 className="w-auto h-auto max-w-full"
                 width={500}
