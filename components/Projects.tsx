@@ -74,11 +74,11 @@ const Projects = () => {
   const handleProjectClick = (projectId: string) => {
     // Navigate to project detail page
     if (projectId === 'traffic-sign-recognition') {
-      window.location.href = '/projects/traffic-sign-recognition';
+      window.location.href = '/portfolio/projects/traffic-sign-recognition';
     } else if (projectId === 'drone-project') {
-      window.location.href = '/projects/drone-project';
+      window.location.href = '/portfolio/projects/drone-project';
     } else if (projectId === 'ai-stock-analysis') {
-      window.location.href = '/projects/ai-stock-analysis';
+      window.location.href = '/portfolio/projects/ai-stock-analysis';
     } else {
       // For other projects, you can add their detail pages later
       console.log(`Navigate to project: ${projectId}`);

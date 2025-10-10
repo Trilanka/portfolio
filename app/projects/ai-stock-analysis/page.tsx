@@ -11,7 +11,7 @@ export default function AIStockAnalysisProject() {
     <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5 min-h-screen">
       <div className="max-w-6xl w-full">
         <FloatingNav navItems={[
-          {name: 'Home', link: '/', icon: <FaHome />},
+          {name: 'Home', link: '/portfolio/', icon: <FaHome />},
           {name: 'About', link: '/about', icon: <FaUser />},
           {name: 'Contact', link: '/contact', icon: <FaEnvelope />}
         ]} />
@@ -19,7 +19,7 @@ export default function AIStockAnalysisProject() {
         {/* Back Button */}
         <div className="pt-32 pb-8">
           <Link 
-            href="/"
+            href="/portfolio/"
             className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors"
           >
             <FaArrowLeft />
@@ -311,7 +311,7 @@ export default function AIStockAnalysisProject() {
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <Link 
-            href="/"
+            href="/portfolio/"
             className="inline-flex items-center gap-2 bg-purple/20 text-purple px-6 py-3 rounded-full hover:bg-purple/30 transition-colors"
           >
             <FaArrowLeft />
