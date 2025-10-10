@@ -66,7 +66,7 @@ const DroneProject = () => {
     <main className="relative bg-black-100 min-h-screen overflow-hidden">
       {/* Navigation */}
       <FloatingNav navItems={[
-        {name: 'Home', link: '/portfolio/', icon: <FaHome />},
+        {name: 'Home', link: '/', icon: <FaHome />},
         {name: 'About', link: '/about', icon: <FaUser />},
         {name: 'Contact', link: '/contact', icon: <FaEnvelope />}
       ]} />
