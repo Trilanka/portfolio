@@ -16,7 +16,7 @@ const TrafficSignRecognition = () => {
               <span>Back to Portfolio</span>
             </Link>
             <div className="flex items-center gap-6">
-              <Link href="/portfolio/" className="text-white/70 hover:text-white transition-colors">
+              <Link href="/" className="text-white/70 hover:text-white transition-colors">
                 Home
               </Link>
               <Link href="/about" className="text-white/70 hover:text-white transition-colors">
