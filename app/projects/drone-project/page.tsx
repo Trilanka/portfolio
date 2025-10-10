@@ -3,6 +3,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { FloatingNav } from '@/components/ui/FloatingNavbar';
+import { FaHome, FaUser, FaBlog, FaEnvelope } from 'react-icons/fa';
 
 const DroneProject = () => {
   const developmentPhases = [
@@ -61,31 +63,13 @@ const DroneProject = () => {
 
   return (
     <main className="relative bg-black-100 min-h-screen overflow-hidden">
-      {/* Simple Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/10">
-        <div className="max-w-6xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors">
-              <span>←</span>
-              <span>Back to Portfolio</span>
-            </Link>
-            <div className="flex items-center gap-6">
-              <Link href="/" className="text-white/70 hover:text-white transition-colors">
-                Home
-              </Link>
-              <Link href="/about" className="text-white/70 hover:text-white transition-colors">
-                About
-              </Link>
-              <Link href="/blog" className="text-white/70 hover:text-white transition-colors">
-                Blog
-              </Link>
-              <Link href="/contact" className="text-white/70 hover:text-white transition-colors">
-                Contact
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      {/* Navigation */}
+      <FloatingNav navItems={[
+        {name: 'Home', link: '/', icon: <FaHome />},
+        {name: 'About', link: '/about', icon: <FaUser />},
+        {name: 'Blog', link: '/blog', icon: <FaBlog />},
+        {name: 'Contact', link: '/contact', icon: <FaEnvelope />}
+      ]} />
 
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
