@@ -65,7 +65,7 @@ const AHero = () => {
           >
             <div className="relative bg-white/5 rounded-3xl border border-white/10 backdrop-blur-sm overflow-hidden">
               <Image 
-                src="./profile.png" 
+                src="./portfolio/docs/profile.png" 
                 alt="Trilanka Beddegama" 
                 className="w-auto h-auto max-w-full"
                 width={400}
