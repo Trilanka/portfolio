@@ -29,8 +29,7 @@ export default function Home() {
       <FloatingNav navItems={[
         {name: 'Home', link: '/', icon: <FaHome />},
         {name: 'About', link: '/about', icon: <FaUser />},
-        {name: 'Blog', link: '/blog', icon: <FaBlog />},
-        {name: 'Contact', link: '/contact', icon: <FaEnvelope />}
+        {name: 'Blog', link: '/blog', icon: <FaBlog />}
       ]} />
       <Hero/>
       {/* <Grid /> */}
