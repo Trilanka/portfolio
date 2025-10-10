@@ -64,7 +64,7 @@ const AHero = () => {
             className="flex justify-center lg:justify-end"
           >
             <div className="relative bg-white/5 rounded-3xl border border-white/10 backdrop-blur-sm overflow-hidden">
-              <Image 
+              <img 
                 src="./profile.png" 
                 alt="Trilanka Beddegama" 
                 className="w-auto h-auto max-w-full"
