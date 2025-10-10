@@ -11,7 +11,7 @@ const TrafficSignRecognition = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/10">
         <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/portfolio/" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors">
+            <Link href="/" className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors">
               <span>←</span>
               <span>Back to Portfolio</span>
             </Link>
