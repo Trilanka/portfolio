@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FloatingNav } from '@/components/ui/FloatingNavbar';
 import { FaHome, FaUser, FaEnvelope } from 'react-icons/fa';
 
@@ -65,7 +66,7 @@ const DroneProject = () => {
     <main className="relative bg-black-100 min-h-screen overflow-hidden">
       {/* Navigation */}
       <FloatingNav navItems={[
-        {name: 'Home', link: '/', icon: <FaHome />},
+        {name: 'Home', link: '/portfolio/', icon: <FaHome />},
         {name: 'About', link: '/about', icon: <FaUser />},
         {name: 'Contact', link: '/contact', icon: <FaEnvelope />}
       ]} />
@@ -303,9 +304,11 @@ const DroneProject = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-3xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
               <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-4 overflow-hidden">
-                <img 
+                <Image 
                   src="/portfolio/drone1.jpg" 
                   alt="Drone competition - Team preparation and testing" 
+                  width={400}
+                  height={300}
                   className="w-full h-auto rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-sm rounded-xl p-3">
@@ -324,9 +327,11 @@ const DroneProject = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-3xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
               <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-4 overflow-hidden">
-                <img 
+                <Image 
                   src="/portfolio/drone2.jpg" 
                   alt="Drone competition - Precision flight through hoops" 
+                  width={400}
+                  height={300}
                   className="w-full h-auto rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-sm rounded-xl p-3">
