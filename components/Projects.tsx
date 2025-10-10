@@ -24,11 +24,11 @@ const projects: Project[] = [
     icon: "🚦"
   },
   {
-    id: "stock-analysis",
-    title: "Agentic Solution for Colombo Stock Market Analysis",
-    description: "AI-powered financial analysis platform using machine learning algorithms to analyze market trends and provide intelligent investment insights.",
+    id: "ai-stock-analysis",
+    title: "AI-Powered Stock Market Analysis System",
+    description: "Comprehensive AI-driven platform for Colombo Stock Exchange featuring real-time sentiment analysis, LLM-based reasoning, and intelligent chatbot for investment insights.",
     category: "AI/ML",
-    gradient: "from-indigo-500/20 to-blue-600/20",
+    gradient: "from-emerald-500/20 to-cyan-600/20",
     icon: "📈"
   },
   {
@@ -74,9 +74,11 @@ const Projects = () => {
   const handleProjectClick = (projectId: string) => {
     // Navigate to project detail page
     if (projectId === 'traffic-sign-recognition') {
-      window.location.href = '/portfolio/projects/traffic-sign-recognition';
+      window.location.href = '/projects/traffic-sign-recognition';
     } else if (projectId === 'drone-project') {
-      window.location.href = '/portfolio/projects/drone-project';
+      window.location.href = '/projects/drone-project';
+    } else if (projectId === 'ai-stock-analysis') {
+      window.location.href = '/projects/ai-stock-analysis';
     } else {
       // For other projects, you can add their detail pages later
       console.log(`Navigate to project: ${projectId}`);

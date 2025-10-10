@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { FloatingNav } from '@/components/ui/FloatingNavbar';
-import { FaHome, FaUser, FaBlog, FaEnvelope } from 'react-icons/fa';
+import { FaHome, FaUser, FaEnvelope } from 'react-icons/fa';
 
 const DroneProject = () => {
   const developmentPhases = [
@@ -67,7 +67,6 @@ const DroneProject = () => {
       <FloatingNav navItems={[
         {name: 'Home', link: '/', icon: <FaHome />},
         {name: 'About', link: '/about', icon: <FaUser />},
-        {name: 'Blog', link: '/blog', icon: <FaBlog />},
         {name: 'Contact', link: '/contact', icon: <FaEnvelope />}
       ]} />
 

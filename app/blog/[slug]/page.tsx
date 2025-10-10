@@ -1,6 +1,6 @@
 import React from 'react';
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import { FaHome, FaBlog, FaUser, FaArrowLeft } from "react-icons/fa";
+import { FaHome, FaUser, FaEnvelope, FaArrowLeft, FaList } from "react-icons/fa";
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
@@ -834,7 +834,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         <FloatingNav navItems={[
           {name: 'Home', link: '/', icon: <FaHome />},
           {name: 'About', link: '/about', icon: <FaUser />},
-          {name: 'Blog', link: '/blog', icon: <FaBlog />}
+          {name: 'Contact', link: '/contact', icon: <FaEnvelope />}
         ]} />
         
         {/* Back Button */}
@@ -895,7 +895,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             href="/blog"
             className="inline-flex items-center gap-2 bg-purple/20 text-purple px-6 py-3 rounded-full hover:bg-purple/30 transition-colors"
           >
-            <FaBlog />
+            <FaList />
             View All Posts
           </Link>
         </div>
