@@ -305,7 +305,7 @@ const DroneProject = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-3xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
               <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-4 overflow-hidden">
                 <img 
-                  src="./drone1.jpg" 
+                  src="/portfolio/drone1.jpg" 
                   alt="Drone competition - Team preparation and testing" 
                   className="w-full h-auto rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300"
                 />
@@ -326,7 +326,7 @@ const DroneProject = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-teal-500/20 rounded-3xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
               <div className="relative bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-4 overflow-hidden">
                 <img 
-                  src="./drone2.jpg" 
+                  src="/portfolio/drone2.jpg" 
                   alt="Drone competition - Precision flight through hoops" 
                   className="w-full h-auto rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300"
                 />
