@@ -33,7 +33,7 @@ const Hero = () => {
               Software Engineer
             </h1>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-gray-300 mb-16 leading-tight tracking-tight">
-              AI/ML Developer • Electronics Engineer
+              AI/ML Developer • Network Engineer
             </h2>
           </motion.div>
 

@@ -40,12 +40,12 @@ const projects: Project[] = [
     icon: "🚁"
   },
   {
-    id: "travel-infrastructure",
-    title: "Travel Infrastructure Project",
-    description: "Comprehensive travel management platform with booking systems, route optimization, and real-time tracking for enhanced user experience.",
-    category: "Full-Stack",
+    id: "starlink-network-simulation",
+    title: "Starlink-Based Multi-Apartment Network Simulation",
+    description: "Multi-apartment network simulation connecting 16 units through Starlink gateway with VLAN segmentation, DHCP/DNS services, and GRE/IPsec tunnel for secure remote connectivity.",
+    category: "Networking",
     gradient: "from-orange-500/20 to-red-600/20",
-    icon: "✈️"
+    icon: "🌐"
   }
 ];
 
