@@ -16,9 +16,16 @@ export interface TimelineEntry {
   content: React.ReactNode;
 }
 
-export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+export interface TimelineProps {
+  data: TimelineEntry[];
+  /** When provided, scroll progress is based on this container (e.g. section-only scroll). */
+  containerRef?: React.RefObject<HTMLDivElement | null>;
+}
+
+export const Timeline = ({ data, containerRef: containerRefProp }: TimelineProps) => {
   const ref = useRef<HTMLDivElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const internalContainerRef = useRef<HTMLDivElement>(null);
+  const containerRef = containerRefProp ?? internalContainerRef;
   const [height, setHeight] = useState(0);
  
   useEffect(() => {
@@ -29,7 +36,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   }, [ref]);
  
   const { scrollYProgress } = useScroll({
-    target: containerRef,
+    target: containerRef as React.RefObject<HTMLElement>,
     offset: ["start 10%", "end 50%"],
   });
  
@@ -39,7 +46,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   return (
     <div
       className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
-      ref={containerRef}
+      ref={containerRefProp ? undefined : internalContainerRef}
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
         <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
