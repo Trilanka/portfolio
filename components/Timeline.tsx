@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
+import Link from "next/link";
 import { Timeline as AceternityTimeline } from "@/components/ui/timeline";
 import { cn } from "@/utils/cn";
 
@@ -64,15 +65,15 @@ function buildTimelineEntries(): {
         <p className="text-neutral-300 text-sm md:text-base leading-relaxed mb-4">
           {entry.description}
         </p>
-        <a
-          href={entry.seeMoreHref}
+        <Link
+          href={entry.seeMoreHref || "#"}
           className={cn(
             "inline-block px-4 py-2 rounded-lg text-sm font-medium",
             "bg-neutral-700/80 text-white hover:bg-neutral-600 transition-colors"
           )}
         >
           See More
-        </a>
+        </Link>
       </div>
     ),
   }));
