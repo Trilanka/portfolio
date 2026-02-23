@@ -2,9 +2,9 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import Image from 'next/image';
+import Image from 'next/image'
 
-const Aunique = () => {
+const ACima = () => {
   return (
     <div className="py-24 px-6 sm:px-8 lg:px-12 xl:px-16">
       <div className="max-w-6xl mx-auto">
@@ -16,7 +16,7 @@ const Aunique = () => {
           className="text-center mb-20"
         >
           <h2 className="text-5xl sm:text-6xl lg:text-7xl font-light text-white mb-8 tracking-tight">
-            I Love to Learn
+            CIMA & Student Council
           </h2>
         </motion.div>
 
@@ -30,9 +30,9 @@ const Aunique = () => {
             className="order-2 lg:order-1"
           >
             <div className="relative bg-white/5 rounded-3xl border border-white/10 backdrop-blur-sm overflow-hidden">
-              <Image 
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/win.jpg`} 
-                alt="Trilanka winning drone competition" 
+              <Image
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/cima-pic.png`}
+                alt="Trilanka speaking at Freshers Eve as CIMA Student Council President"
                 className="w-auto h-auto max-w-full"
                 width={500}
                 height={400}
@@ -50,31 +50,32 @@ const Aunique = () => {
           >
             <div className="space-y-6 text-xl text-gray-300 leading-relaxed font-light">
               <p>
-                I am a <span className="text-white font-medium">quick learner</span>, especially when it comes to tech! 
-                I recently won a major drone competition, all thanks to a project where I had to develop an AI model to control drones.
+                Meantime I was studying <span className="text-white font-medium">CIMA</span> (Chartered Institute of Management Accountants), 
+                I was appointed <span className="text-white font-medium">President of the Student Council</span> at the certificate level.
               </p>
               <p>
-                I jumped right into learning the technology, and it paid off! Honestly, I think the reason I pick up new skills so fast 
-                is simple... <span className="text-white font-medium">I love what I do!</span>
+                In that role I was responsible for organizing and running all council events—from Freshers&apos; Eve to formal proceedings—and 
+                keeping everything on track. It wasn&apos;t only about education; it was about <span className="text-white font-medium">leadership</span>, 
+                <span className="text-white font-medium"> event management</span>, and <span className="text-white font-medium">coordination</span> with members and stakeholders.
               </p>
             </div>
 
             <div className="grid grid-cols-2 gap-6 mt-12">
               <div className="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
-                <h3 className="text-white font-medium mb-3 text-lg">AI/ML</h3>
-                <p className="text-gray-400 text-sm font-light">Machine Learning & Deep Learning</p>
+                <h3 className="text-white font-medium mb-3 text-lg">CIMA</h3>
+                <p className="text-gray-400 text-sm font-light">Certificate Level</p>
               </div>
               <div className="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
-                <h3 className="text-white font-medium mb-3 text-lg">Web Dev</h3>
-                <p className="text-gray-400 text-sm font-light">Full Stack Development</p>
+                <h3 className="text-white font-medium mb-3 text-lg">Student Council</h3>
+                <p className="text-gray-400 text-sm font-light">President</p>
               </div>
               <div className="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
-                <h3 className="text-white font-medium mb-3 text-lg">Robotics</h3>
-                <p className="text-gray-400 text-sm font-light">Drone & Automation</p>
+                <h3 className="text-white font-medium mb-3 text-lg">Events</h3>
+                <p className="text-gray-400 text-sm font-light">Organized & Led</p>
               </div>
               <div className="bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
-                <h3 className="text-white font-medium mb-3 text-lg">Problem Solving</h3>
-                <p className="text-gray-400 text-sm font-light">Creative Solutions</p>
+                <h3 className="text-white font-medium mb-3 text-lg">Proceedings</h3>
+                <p className="text-gray-400 text-sm font-light">Kept on Track</p>
               </div>
             </div>
           </motion.div>
@@ -84,4 +85,4 @@ const Aunique = () => {
   )
 }
 
-export default Aunique
+export default ACima

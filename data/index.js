@@ -1,3 +1,5 @@
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export const navItems = [
     { name: "About", link: "#about" },
     { name: "Projects", link: "#projects" },
@@ -44,7 +46,7 @@ export const navItems = [
       imgClassName: "",
       titleClassName: "justify-start",
       /*img: "/grid.svg",*/
-      spareImg: "/portfolio/b4.svg",
+      spareImg: `${BASE}/b4.svg`,
     },
   
     {
@@ -55,7 +57,7 @@ export const navItems = [
       imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
       titleClassName: "justify-center md:justify-start lg:justify-center",
      /* img: "/b5.svg",*/
-      spareImg: "/portfolio/grid.svg",
+      spareImg: `${BASE}/grid.svg`,
     },
     {
       id: 6,
@@ -74,8 +76,8 @@ export const navItems = [
       id: 1,
       title: "Drone making For a Competition",
       des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-      img: "/portfolio/p1.svg",
-      iconLists: ["/portfolio/re.svg", "/portfolio/tail.svg", "/portfolio/ts.svg", "/portfolio/three.svg", "/portfolio/fm.svg"],
+      img: `${BASE}/p1.svg`,
+      iconLists: [`${BASE}/re.svg`, `${BASE}/tail.svg`, `${BASE}/ts.svg`, `${BASE}/three.svg`, `${BASE}/fm.svg`],
       link: "/ui.earth.com",
     },
     {
@@ -83,7 +85,7 @@ export const navItems = [
       title: "Yoom - Video Conferencing App",
       des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
      /* img: "/p2.svg",*/
-      iconLists: ["/portfolio/next.svg", "/portfolio/tail.svg", "/portfolio/ts.svg", "/portfolio/stream.svg", "/portfolio/c.svg"],
+      iconLists: [`${BASE}/next.svg`, `${BASE}/tail.svg`, `${BASE}/ts.svg`, `${BASE}/stream.svg`, `${BASE}/c.svg`],
       link: "/ui.yoom.com",
     },
     {
@@ -91,7 +93,7 @@ export const navItems = [
       title: "AI Image SaaS - Canva Application",
       des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
     /*  img: "/p3.svg", */
-      iconLists: ["/portfolio/re.svg", "/portfolio/tail.svg", "/portfolio/ts.svg", "/portfolio/three.svg", "/portfolio/c.svg"],
+      iconLists: [`${BASE}/re.svg`, `${BASE}/tail.svg`, `${BASE}/ts.svg`, `${BASE}/three.svg`, `${BASE}/c.svg`],
       link: "/ui.aiimg.com",
     },
     {
@@ -99,7 +101,7 @@ export const navItems = [
       title: "Animated Apple Iphone 3D Website",
       des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
     /*  img: "/p4.svg", */
-      iconLists: ["/portfolio/next.svg", "/portfolio/tail.svg", "/portfolio/ts.svg", "/portfolio/three.svg", "/portfolio/gsap.svg"],
+      iconLists: [`${BASE}/next.svg`, `${BASE}/tail.svg`, `${BASE}/ts.svg`, `${BASE}/three.svg`, `${BASE}/gsap.svg`],
       link: "/ui.apple.com",
     },
   ];
@@ -111,41 +113,41 @@ export const navItems = [
       title: "Frontend Engineer Intern",
       desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
       className: "md:col-span-2",
-      thumbnail: "/portfolio/exp1.svg",
+      thumbnail: `${BASE}/exp1.svg`,
     },
     {
       id: 2,
       title: "Mobile App Dev - JSM Tech",
       desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
       className: "md:col-span-2", // change to md:col-span-2
-      thumbnail: "/portfolio/exp2.svg",
+      thumbnail: `${BASE}/exp2.svg`,
     },
     {
       id: 3,
       title: "Freelance App Dev Project",
       desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
       className: "md:col-span-2", // change to md:col-span-2
-      thumbnail: "/portfolio/exp3.svg",
+      thumbnail: `${BASE}/exp3.svg`,
     },
     {
       id: 4,
       title: "Lead Frontend Developer",
       desc: "Developed and maintained user-facing features using modern frontend technologies.",
       className: "md:col-span-2",
-      thumbnail: "/portfolio/exp4.svg",
+      thumbnail: `${BASE}/exp4.svg`,
     },
   ];
   
   export const socialMedia = [
     {
       id: 1,
-      img: "/portfolio/git.svg",
+      img: `${BASE}/git.svg`,
     },
     {
       id: 2,
-      img: "/portfolio/twit.svg",
+      img: `${BASE}/twit.svg`,
     },
     {
       id: 3,
-      img: "/portfolio/link.svg",
+      img: `${BASE}/link.svg`,
     },]

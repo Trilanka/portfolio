@@ -1,5 +1,6 @@
 import AHero from "@/components/AHero";
 import Alead from "@/components/Alead";
+import ACima from "@/components/ACima";
 import ANavBar from "@/components/ANavBar";
 import Aunique from "@/components/Aunique";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
@@ -36,6 +37,7 @@ export default function AboutPage() {
         <AHero />
         <Aunique />
         <Alead />
+        <ACima />
       </div>
     </main>
   );

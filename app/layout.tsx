@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     description: "Software Engineer, AI/ML Developer, Network Engineer, and Electronics Engineer based in Colombo, Sri Lanka. Passionate about creating technology that makes a difference.",
     images: [
       {
-        url: '/portfolio/profile.png',
+        url: '/profile.png',
         width: 1200,
         height: 630,
         alt: 'Trilanka Beddegama - Software Engineer, AI/ML Developer & Network Engineer',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Trilanka Beddegama - Software Engineer, AI/ML Developer & Network Engineer",
     description: "Software Engineer, AI/ML Developer, Network Engineer, and Electronics Engineer based in Colombo, Sri Lanka. Passionate about creating technology that makes a difference.",
-    images: ['/portfolio/profile.png'],
+    images: ['/profile.png'],
     creator: '@Trilanka', // Update with your actual Twitter handle if you have one
   },
   robots: {
