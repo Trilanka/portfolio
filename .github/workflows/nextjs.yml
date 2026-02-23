@@ -70,8 +70,8 @@ jobs:
           cache-dependency-path: ${{ steps.app-dir.outputs.dir }}/package-lock.json
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        with:
-          static_site_generator: next
+        # Don't use static_site_generator: next — we set basePath in next.config.mjs ourselves.
+        # The action's config injection fails on ESM (next.config.mjs) and causes "Unexpected token" errors.
       - name: Restore cache
         uses: actions/cache@v4
         with:
