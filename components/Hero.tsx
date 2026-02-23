@@ -30,10 +30,10 @@ const Hero = () => {
             className="mb-12"
           >
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-white mb-8 leading-tight tracking-tight">
-              Software Engineer
+              Application Engineer
             </h1>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light text-gray-300 mb-16 leading-tight tracking-tight">
-              AI/ML Developer • Network Engineer
+              AI/ML Developer • Elecronic Engineer
             </h2>
           </motion.div>
 
