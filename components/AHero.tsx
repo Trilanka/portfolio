@@ -29,11 +29,10 @@ const AHero = () => {
                 specialized in Electrical and Electronic Engineering.
               </p>
               <p>
-                I have a strong focus on <span className="text-white font-medium">Software Engineering</span> and 
-                <span className="text-white font-medium"> AI/ML/DL development</span>.
+                I like building software and applications, working with AI/ML, and digging into systems and networking. I&apos;m curious about new tools and always learning.
               </p>
               <p>
-                I&apos;m now looking for an opportunity with an employer where I can grow and expand my career in the tech industry.
+                I&apos;m open to roles in systems engineering, applications, networking, software, or AI/ML. I want to find a place where I can grow and build my career.
               </p>
             </div>
 
