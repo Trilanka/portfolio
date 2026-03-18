@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import { FaHome, FaUser, FaEnvelope, FaArrowLeft, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaHome, FaUser, FaEnvelope, FaBlog, FaArrowLeft, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -12,6 +12,7 @@ export default function AIStockAnalysisProject() {
       <div className="max-w-6xl w-full">
         <FloatingNav navItems={[
           {name: 'Home', link: '/', icon: <FaHome />},
+          {name: 'Blog', link: '/blog', icon: <FaBlog />},
           {name: 'About', link: '/about', icon: <FaUser />},
           {name: 'Contact', link: '/contact', icon: <FaEnvelope />}
         ]} />

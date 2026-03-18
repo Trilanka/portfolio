@@ -13,6 +13,7 @@ import { usePathname } from "next/navigation";
 export const FloatingNav = ({
   navItems,
   className,
+  variant = "dark",
 }: {
   navItems: {
     name: string;
@@ -20,6 +21,7 @@ export const FloatingNav = ({
     icon?: JSX.Element;
   }[];
   className?: string;
+  variant?: "dark" | "light";
 }) => {
   const { scrollYProgress } = useScroll();
   const pathname = usePathname();
@@ -63,41 +65,49 @@ export const FloatingNav = ({
           transition: { duration: 0.2 }
         }}
         className={cn(
-          "flex max-w-fit fixed top-10 inset-x-0 mx-auto border border-white/20 rounded-full backdrop-blur-xl bg-white/10 shadow-2xl shadow-black/20 z-[5000] pr-2 pl-8 py-2 items-center justify-center space-x-4",
+          "flex max-w-fit fixed top-10 inset-x-0 mx-auto rounded-full backdrop-blur-xl z-[5000] pr-2 pl-8 py-2 items-center justify-center space-x-4",
+          variant === "dark" &&
+            "border border-white/20 bg-white/10 shadow-2xl shadow-black/20",
+          variant === "light" &&
+            "border border-neutral-200 bg-white/80 shadow-lg shadow-black/5",
           className
         )}
       >
         {/* Animated background layers */}
-        <motion.div 
-          className="absolute inset-0 bg-gradient-to-r from-white/5 via-transparent to-white/5 rounded-full"
-          animate={{
-            background: [
-              "linear-gradient(90deg, rgba(255,255,255,0.05) 0%, transparent 50%, rgba(255,255,255,0.05) 100%)",
-              "linear-gradient(90deg, rgba(255,255,255,0.08) 0%, transparent 50%, rgba(255,255,255,0.08) 100%)",
-              "linear-gradient(90deg, rgba(255,255,255,0.05) 0%, transparent 50%, rgba(255,255,255,0.05) 100%)"
-            ]
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div 
-          className="absolute inset-0 bg-gradient-to-b from-purple/10 via-transparent to-pink-300/10 rounded-full"
-          animate={{
-            background: [
-              "linear-gradient(180deg, rgba(147,51,234,0.1) 0%, transparent 50%, rgba(236,72,153,0.1) 100%)",
-              "linear-gradient(180deg, rgba(147,51,234,0.15) 0%, transparent 50%, rgba(236,72,153,0.15) 100%)",
-              "linear-gradient(180deg, rgba(147,51,234,0.1) 0%, transparent 50%, rgba(236,72,153,0.1) 100%)"
-            ]
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
+        {variant === "dark" && (
+          <>
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-white/5 via-transparent to-white/5 rounded-full"
+              animate={{
+                background: [
+                  "linear-gradient(90deg, rgba(255,255,255,0.05) 0%, transparent 50%, rgba(255,255,255,0.05) 100%)",
+                  "linear-gradient(90deg, rgba(255,255,255,0.08) 0%, transparent 50%, rgba(255,255,255,0.08) 100%)",
+                  "linear-gradient(90deg, rgba(255,255,255,0.05) 0%, transparent 50%, rgba(255,255,255,0.05) 100%)",
+                ],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-b from-purple/10 via-transparent to-pink-300/10 rounded-full"
+              animate={{
+                background: [
+                  "linear-gradient(180deg, rgba(147,51,234,0.1) 0%, transparent 50%, rgba(236,72,153,0.1) 100%)",
+                  "linear-gradient(180deg, rgba(147,51,234,0.15) 0%, transparent 50%, rgba(236,72,153,0.15) 100%)",
+                  "linear-gradient(180deg, rgba(147,51,234,0.1) 0%, transparent 50%, rgba(236,72,153,0.1) 100%)",
+                ],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+          </>
+        )}
         
         {navItems.map((navItem: any, idx: number) => {
           const isActive = pathname === navItem.link;
@@ -112,9 +122,14 @@ export const FloatingNav = ({
                 href={navItem.link}
                 className={cn(
                   "relative items-center flex space-x-1 transition-all duration-300 px-3 py-2 rounded-full",
-                  isActive 
-                    ? "text-white bg-white/20 border border-white/30" 
-                    : "text-white/80 hover:text-white hover:bg-white/10"
+                  variant === "dark" &&
+                    (isActive
+                      ? "text-white bg-white/20 border border-white/30"
+                      : "text-white/80 hover:text-white hover:bg-white/10"),
+                  variant === "light" &&
+                    (isActive
+                      ? "text-neutral-900 bg-neutral-100 border border-neutral-300"
+                      : "text-neutral-700 hover:text-neutral-900 hover:bg-neutral-100")
                 )}
               >
                 <span className="block sm:hidden">{navItem.icon}</span>

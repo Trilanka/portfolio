@@ -1,10 +1,11 @@
 
+import Link from "next/link";
 import Projects from "@/components/Projects";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import Timeline from "@/components/Timeline";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import { FaHome, FaUser, FaEnvelope } from "react-icons/fa";
+import { FaHome, FaUser, FaEnvelope, FaBlog } from "react-icons/fa";
 import Footer from "@/components/Footer";
 import Techstack from "@/components/Techstack";
 
@@ -29,14 +30,31 @@ export default function Home() {
     <div className="relative z-10 w-full">
       <FloatingNav navItems={[
         {name: 'Home', link: '/', icon: <FaHome />},
+        {name: 'Blog', link: '/blog', icon: <FaBlog />},
         {name: 'About', link: '/about', icon: <FaUser />},
         {name: 'Contact', link: '/contact', icon: <FaEnvelope />}
       ]} />
       <Hero/>
       {/* <Grid /> */}
       <Timeline />
-      {/* <RecentProjects /> */}
-      {/* <Clients /> */}
+      {/* Blog teaser */}
+      <section className="w-full py-16 md:py-20 px-4 md:px-8" id="blog">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
+            Writing about the work I do
+          </h2>
+          <p className="text-white/70 text-lg max-w-2xl mx-auto mb-8">
+            I write blog posts about parts of projects I work on—what I built, what I learned, and how we ship industrial-ready software.
+          </p>
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 text-white border border-white/20 hover:bg-white/20 hover:border-white/30 transition-colors"
+          >
+            <FaBlog />
+            Read the blog
+          </Link>
+        </div>
+      </section>
       <Projects />
       <Techstack />
       <Footer />

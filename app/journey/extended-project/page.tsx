@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import { FaHome, FaUser, FaEnvelope } from "react-icons/fa";
+import { FaHome, FaUser, FaEnvelope, FaBlog } from "react-icons/fa";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -77,6 +77,7 @@ export default function ExtendedProjectPage() {
       <FloatingNav
         navItems={[
           { name: "Home", link: "/", icon: <FaHome /> },
+          { name: "Blog", link: "/blog", icon: <FaBlog /> },
           { name: "About", link: "/about", icon: <FaUser /> },
           { name: "Contact", link: "/contact", icon: <FaEnvelope /> },
         ]}

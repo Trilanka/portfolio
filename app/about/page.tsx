@@ -4,7 +4,7 @@ import ACima from "@/components/ACima";
 import ANavBar from "@/components/ANavBar";
 import Aunique from "@/components/Aunique";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import { FaHome, FaUser, FaEnvelope } from "react-icons/fa";
+import { FaHome, FaUser, FaEnvelope, FaBlog } from "react-icons/fa";
 
 
 export default function AboutPage() {
@@ -28,6 +28,7 @@ export default function AboutPage() {
       {/* Navigation */}
       <FloatingNav navItems={[
         {name: 'Home', link: '/', icon: <FaHome />},
+        {name: 'Blog', link: '/blog', icon: <FaBlog />},
         {name: 'About', link: '/about', icon: <FaUser />},
         {name: 'Contact', link: '/contact', icon: <FaEnvelope />}
       ]} />

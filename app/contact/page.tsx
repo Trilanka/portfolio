@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import { FaHome, FaUser, FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import { FaHome, FaUser, FaEnvelope, FaBlog, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
 
 const Contact = () => {
@@ -58,6 +58,7 @@ const Contact = () => {
       {/* Navigation */}
       <FloatingNav navItems={[
         {name: 'Home', link: '/', icon: <FaHome />},
+        {name: 'Blog', link: '/blog', icon: <FaBlog />},
         {name: 'About', link: '/about', icon: <FaUser />},
         {name: 'Contact', link: '/contact', icon: <FaEnvelope />}
       ]} />

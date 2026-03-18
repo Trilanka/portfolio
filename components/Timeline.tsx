@@ -8,7 +8,6 @@ import { cn } from "@/utils/cn";
 export interface TimelineEntryData {
   id: string;
   title: string;
-  /** Date or range shown on the timeline (e.g. "2023", "Jun 2024", "Jan 2023 – present"). */
   date?: string;
   description: string;
   seeMoreHref?: string;
@@ -18,7 +17,7 @@ const journeyData: TimelineEntryData[] = [
   {
     id: "extended-project",
     title: "Extended Project (Internship)",
-    date: "2023 – 2024",
+    date: "2024 – 2025",
     description:
       "After my last internship ended with the 2023 internship at Codegen Pvt Ltd, I got this project to continue and was offered the job as well.",
     seeMoreHref: "/journey/extended-project",
@@ -26,7 +25,7 @@ const journeyData: TimelineEntryData[] = [
   {
     id: "startup-team",
     title: "Joined with the startup team",
-    date: "2023",
+    date: "2024",
     description:
       "First time forming a team and started working on product development — industrial-ready software solutions.",
     seeMoreHref: "#",
@@ -34,7 +33,7 @@ const journeyData: TimelineEntryData[] = [
   {
     id: "bachelors",
     title: "Bachelor's of Engineering",
-    date: "Jun 2024",
+    date: "Jun 2025",
     description:
       "Successfully completed the degree in Electrical and Electronic Engineering from the University of Peradeniya.",
     seeMoreHref: "#",
@@ -42,7 +41,7 @@ const journeyData: TimelineEntryData[] = [
   {
     id: "product-dev-continuation",
     title: "Continuation of product development role",
-    date: "Jul 2024 – present",
+    date: "Jul 2025 – present",
     description:
       "Continued with the product development role after graduation — building industrial-ready software solutions with the startup team.",
     seeMoreHref: "#",
